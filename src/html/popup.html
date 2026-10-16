@@ -1,0 +1,25 @@
+<div style="display: none;" class="popup" id="discover">
+    <div class="popup__title">Discover our services</div>
+    <form class="form popup__form">
+        <div class="form__row">
+            <input class="form__input" type="tel" name="phone" placeholder="Phone">
+            <input class="form__input" type="text" name="last" placeholder="Last name">
+            <input class="form__input" type="email" name="email" placeholder="Email*" required>
+            <input class="form__input" type="text" name="phone" placeholder="First name*" required>
+        </div>
+        <div class="form__row">
+            <div class="form__item">
+                <label for="message1">Any additional requests that we may assist you with?</label>
+                <textarea class="form__input" name="message" id="message1" placeholder="Enter text"></textarea>
+            </div>
+        </div>
+        <div class="form__row">
+            <div class="form__item d-flex">
+                <input type="checkbox" name="privacy" class="form__checkbox" id="privacy1">
+                <label for="privacy1" class="form__checkbox-text">Your personal data will be processed in accordance with our <a href="#">Privacy Notice</a></label>
+            </div>
+        </div>
+        <!-- <button class="btn" type="submit">Submit</button> -->
+         <button class="btn popup-link" type="button" data-src="#success">Submit</button>
+    </form>
+</div>

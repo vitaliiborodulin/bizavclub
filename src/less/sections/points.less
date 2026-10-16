@@ -1,0 +1,106 @@
+.points {
+    padding: 100px 0;
+
+    .md-block({
+        padding: 50px 0;
+    });
+
+    &__title {
+        font-family: 'Evolventa', sans-serif;
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 120%;
+        letter-spacing: -0.02em;
+
+        .xs(font-size, 26px);
+    }
+
+    &__descr {
+        margin-top: 20px;
+        font-size: 20px;
+        line-height: 130%;
+        letter-spacing: 0em;
+
+        .xs-block({
+            margin-top: 16px;
+            font-size: 16px;
+        });
+    }
+
+    &__list {
+        margin-top: 60px;
+        .xs(margin-top, 32px);
+    }
+
+    &__item {
+        padding: 16px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        border-bottom: 1px solid fade(@beige, 20%);
+
+        .xs(display, block);
+    }
+
+    &__item:first-of-type {
+        border-top: 1px solid fade(@beige, 20%);
+    }
+
+    &__name {
+        position: relative;
+        padding-left: 56px;
+        width: 40%;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 110%;
+        letter-spacing: -0.01em;
+
+        .xs-block({
+            width: 100%;
+            font-size: 18px;
+            padding-left: 0;
+            padding-top: 40px;
+        });
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background: @beige url(../img/arrow-left-24-w.svg) no-repeat center;
+
+            .xs-block({
+                width: 32px;
+                height: 32px;
+                top: 0;
+                transform: none
+            });
+        }
+    }
+
+    &__text {
+        width: 53%;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 120%;
+        letter-spacing: 0em;
+        color: @text1;
+
+        .xs-block({
+            width: 100%;
+            margin-top: 8px;
+            font-size: 13px;
+        });
+    }
+
+}
+
+.page-commerce .points {
+    padding-bottom: 140px;
+    .xs(padding-bottom, 90px)
+}

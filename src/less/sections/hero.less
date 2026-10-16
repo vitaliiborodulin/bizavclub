@@ -1,0 +1,132 @@
+.hero {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    min-height: 780px;
+    padding-top: 90px;
+
+    .md-block({
+        padding-top: 80px;
+        min-height: 720px;
+    });
+
+    &__content {
+        padding-top: 80px;
+        .md(padding-top, 32px);
+    }
+
+    &__descr {
+        margin-top: 20px;
+        font-size: 20px;
+        line-height: 130%;
+        letter-spacing: 0em;
+        color: @text1;
+
+        .md-block({
+            margin-top: 16px;
+            font-size: 16px;
+        });
+    }
+
+    &__btn {
+        margin-top: 48px;
+        .md(margin-top, 32px);
+    }
+}
+
+.color-w.hero {
+    .hero__descr {
+        color: fade(@light, 80%);
+    }
+}
+
+.page-home .hero {
+    background-image: url('../img/home-hero.jpg');
+
+    .md-block({
+        min-height: 520px;
+        background-image: url('../img/home-hero-m.jpg');
+    });
+
+    .hero__content {
+        padding-top: 0;
+    }
+    
+}
+
+.page-about .hero {
+    min-height: 720px;
+    background-image: url('../img/about-hero.jpg');
+
+    .md-block({
+        background-image: url('../img/about-hero-m.jpg');
+    });
+}
+
+.page-jet-rent .hero {
+    background-image: url('../img/jet-rent-hero.jpg');
+
+    // .md-block({
+    //     background-image: url('../img/about-hero-m.jpg');
+    // });
+}
+
+.page-group .hero {
+    background-image: url('../img/group-hero.jpg');
+
+    // .md-block({
+    //     background-image: url('../img/about-hero-m.jpg');
+    // });
+}
+
+.page-helic-rent .hero {
+    background: url('../img/helic-rent-hero.jpg') no-repeat center bottom/cover;
+
+    // .md-block({
+    //     background-image: url('../img/about-hero-m.jpg');
+    // });
+}
+
+.page-medic .hero {
+    background: url('../img/medic-hero.jpg') no-repeat center/cover;
+
+    // .md-block({
+    //     background-image: url('../img/about-hero-m.jpg');
+    // });
+}
+
+.page-concierge .hero {
+    background: url('../img/concierge-hero.jpg') no-repeat center/cover;
+
+    .md-block({
+        background: url('../img/concierge-hero-m.jpg') no-repeat center bottom/cover;
+        min-height: 500px;
+    });
+}
+
+.page-sell .hero {
+    background: url('../img/sell-hero.jpg') no-repeat center/cover;
+
+    .md-block({
+        background: url('../img/sell-hero-m.jpg') no-repeat center bottom/cover;
+    });
+}
+
+.page-commerce .hero {
+    background: url('../img/commerce-hero.jpg') no-repeat center/cover;
+
+    .md-block({
+        background: url('../img/commerce-hero-m.jpg') no-repeat center bottom/cover;
+    });
+}
+
+.page-cargo .hero {
+    background: url('../img/cargo-hero.jpg') no-repeat center/cover;
+
+    .md-block({
+        background: url('../img/cargo-hero-m.jpg') no-repeat center bottom/cover;
+    });
+}
+
+

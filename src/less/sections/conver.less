@@ -1,0 +1,51 @@
+.conver {
+    padding: 100px 0;
+    min-height: 462px;
+
+    color: @light2;
+
+    .md-block({
+        padding: 32px 0;
+        min-height: 600px;
+    });
+
+    &__content {
+        max-width: 50%;
+        .md(max-width, 100%);
+    }
+
+    &__title {
+        font-family: 'Evolventa', sans-serif;
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 120%;
+        letter-spacing: -0.02em;
+
+        .md(font-size, 26px);
+    }
+
+    &__descr {
+        margin-top: 20px;
+        font-size: 20px;
+        line-height: 130%;
+        letter-spacing: 0em;
+        color: fade(@light, 80%);
+
+        .md(font-size, 16px);
+    }
+
+    &__btn {
+        margin-top: 48px;
+
+        .md(margin-top, 32px);
+    }
+}
+
+.page-concierge .conver,
+.page-cargo .conver {
+    background: @beige url(../img/concierge-conver.jpg) no-repeat center/cover;
+
+    .md-block({
+        background: @beige url(../img/concierge-conver-m.jpg) no-repeat center/cover;
+    });
+}

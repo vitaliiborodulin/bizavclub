@@ -1,0 +1,101 @@
+.faq {
+
+    .h2 {
+        margin-bottom: 60px;
+        .md(margin-bottom, 32px);
+    }
+    
+    &__content {
+        .row-flex();
+    }
+
+    &__list {
+        // column-count: 2;
+        // column-gap: 20px;
+
+        .col();
+        .size(6);
+        .size-md(12);
+
+        // margin-bottom: -12px;
+        // .md(margin-bottom, -10px);
+    }
+
+    &__item {
+        padding: 20px;
+        border-radius: 10px;
+        background-color: @blue_l;
+        margin-bottom: 12px;
+        
+        .md-block({
+            padding: 16px;
+            margin-bottom: 10px;
+        });
+        
+        // break-inside: avoid; 
+        // page-break-inside: avoid; 
+    }
+    
+    &__header {
+        padding-right: 60px;
+        position: relative;
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: -0.01em;
+        cursor: pointer;
+        min-height: 40px;
+        display: flex;
+        align-items: center;
+
+        .md-block({
+            font-size: 18px;
+            padding-right: 56px;
+        });
+
+        &::after {
+            position: absolute;
+            content: '';
+            right: 0;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: @light url(../img/arrow-left.svg) no-repeat center;
+            transition: rotate .5s ease;
+        }
+
+        &.active::after {
+            transform: rotate(-90deg);
+        }
+    }
+
+    &__body {
+        padding-right: 60px;
+        margin-top: 12px;
+        display: none;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 120%;
+        letter-spacing: 0em;
+
+        .md(padding-right, 56px);
+
+        p {
+            margin: 0;
+        }
+
+        p, ul, li {
+            margin: 5px 0;
+        }
+
+        ul li {
+            list-style-type: disc;
+            list-style-position: inside;
+        }
+
+        ol li {
+            list-style-type: decimal;
+            list-style-position: inside;
+        }
+    }
+}

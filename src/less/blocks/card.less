@@ -1,0 +1,43 @@
+.card {
+    padding: 20px 14px 20px 20px;
+
+    background-color: @light;
+    color: @text;
+
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+
+    .md-block({
+        padding: 20px;
+        margin-bottom: 8px;
+    });
+
+    &__pic {
+        margin-bottom: 12px;
+
+        .md(margin-bottom, 8px);
+    }
+
+    &__title {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 110%;
+        letter-spacing: -0.01em;
+
+        .md(font-size, 18px);
+    }
+
+    &__descr {
+        margin-top: 12px;
+        font-size: 15px;
+        font-weight: 500;
+        color: @text1;
+        line-height: 120%;
+        letter-spacing: 0em;
+
+        .md-block({
+            margin-top: 8px;
+            font-size: 13px;
+        });
+    }
+}

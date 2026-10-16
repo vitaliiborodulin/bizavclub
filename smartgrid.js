@@ -1,0 +1,23 @@
+module.exports = {
+	columns: 12,
+	offset: "20px",
+	container: {
+		maxWidth: "1368px",
+		fields: "24px" // fields must be >= offset / 2
+	},
+	breakPoints: {
+		// xl: {
+		// 	width: "1200px",
+		// },
+		lg: {
+			width: "1010px",
+		},
+		md: {
+			width: "768px"
+		},
+		xs: {
+			width: "576px",
+			fields: "16px"
+		},
+	}
+}

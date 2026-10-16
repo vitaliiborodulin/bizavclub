@@ -1,0 +1,96 @@
+.btn {
+    padding: 20px;
+
+    max-width: 100%;
+    // width: 260px;
+
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0;
+
+    color: @light;
+    background-color: @beige;
+
+    position: relative;
+    display: inline-block;
+
+    border-radius: 100px;
+    text-align: center;
+    cursor: pointer;
+    z-index: 1;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+
+    .md-block({
+        padding: 18px;
+        font-size: 13px;
+    });
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: #9E8A6D;
+    }
+
+    span {
+        position: relative;
+        padding-right: 26px;
+
+        &::after {
+            position: absolute;
+            content: '';
+            width: 16px;
+            height: 16px;
+            top: 50%;
+            right: 0;
+            background: url(../img/arrow-left-w.svg) no-repeat center;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+.btn-w {
+    background-color: @light;
+    color: @text;
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: @light2;
+    }
+
+    span::after {
+        background: url(../img/arrow-left.svg) no-repeat center;
+    }
+}
+
+.soc__btns {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-soc {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    padding: 10px;
+
+    font-size: 14px;
+    font-weight: 500;
+    
+    background-color: fade(@light, 10%);
+    backdrop-filter: blur(4px);
+    border-radius: 10px;
+}
+
+.footer .btn-soc {
+    margin-top: 32px;
+    background-color: @light;
+
+    .lg(margin-top, 16px);
+}

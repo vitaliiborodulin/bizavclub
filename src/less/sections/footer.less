@@ -1,0 +1,102 @@
+.footer {
+    padding: 60px 76px;
+    background-color: @light2;
+    font-size: 13px;
+
+    .md-block({
+        padding-top: 50px;
+        padding-bottom: 90px;
+    });
+
+    .xs(font-size, 12px);
+
+    &__content {
+        position: relative;
+        .row-flex();
+        .md(text-align, center);
+    }
+
+    &__left {
+        .col();
+        .size(3);
+        .size-lg(4);
+        .size-md(12);
+    }
+
+    &__logo {
+        margin-bottom: 32px;
+        display: block;
+        
+        img {
+            width: 175px;
+            display: inline-block;
+            height: auto;
+
+            .md-block({
+                 width: 140px;
+            });
+        }
+    }
+
+    &__copyright {
+        font-weight: 500;
+        line-height: 120%;
+
+        .md-block({
+            position: absolute;
+            bottom: -30px;
+            width: 100%;
+        });
+    }
+
+    &__right{
+        .col();
+        .size(9);
+        .size-lg(8);
+        .size-md(12);
+    }
+
+    &__right-inner {
+        .row-flex();
+    }
+
+    &__nav {
+        .col();
+        .size(3);
+        .size-lg(6);
+        .size-md(12);
+
+        .lg(margin-bottom, 24px);
+    }
+
+    &__title {
+        margin-bottom: 32px;
+        font-size: 15px;
+        font-weight: 600;
+
+        .md-block({
+            margin-bottom: 16px;
+            font-size: 13px;
+        });
+    }
+
+    &__menu {
+        color: @text1;
+
+
+        li + li {
+            margin-top: 8px;
+        }
+
+        a {
+            color: inherit;
+            transition: color 0.3s ease;
+
+            &:hover,
+            &:active,
+            &:focus {
+                color: @beige;
+            }
+        }
+    }
+}

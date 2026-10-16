@@ -1,0 +1,50 @@
+.arrows {
+    z-index: 2;
+    display: flex;
+    gap: 12px;
+    font-size: 0;
+}
+
+.arrow {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: @blue_d url(../img/arrow-left-w.svg) no-repeat center;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.arrow:hover {
+    background-color: @beige;
+}
+
+
+.arrow.arrow--w {
+    background: @light url(../img/arrow-left.svg) no-repeat center;
+}
+
+.arrow.arrow--w:hover {
+    background-color: @beige;
+}
+
+.arrow-prev {
+    transform: scaleX(-1);
+}
+
+.slick-disabled {
+    opacity: 0.1;
+    cursor: not-allowed;
+}
+
+.slick-slider {
+    overflow: hidden;
+}
+
+.slick-list {
+  margin: 0 -10px;
+    
+}
+
+.slick-slide {
+    margin: 0 10px;
+}

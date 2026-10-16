@@ -1,0 +1,267 @@
+// USER VARIABLES SECTION
+@beige: #B8A282;
+@blue_l: #EBEFF3;
+@blue_d: #606773;
+@light: #FFFAF5;
+@light2: #F7F1EA;
+@text: #31363E;
+@text1: #4F555F;
+
+
+@fontsize: 15px; // Body Font Size
+@lineheight: 1.2; // Document Line Height
+
+@userfont: 'Manrope', sans-serif;
+@systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
+
+// .reset();
+
+
+
+.container {
+    .wrapper();
+}
+
+// ::placeholder {
+// 	color: fade(@black, 40%);
+// }
+
+// ::selection {
+// 	background-color: fade(@accent, 30%);
+// 	color: @black;
+// }
+
+// input, textarea {
+// 	outline: none;
+// 	&:focus:required:invalid { border: 1px solid @accent2 }
+// 	&:required:valid { border: 1px solid green }
+// }
+
+
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('../fonts/Manrope-Regular.eot');
+    src: url('../fonts/Manrope-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Manrope-Regular.woff2') format('woff2'),
+        url('../fonts/Manrope-Regular.woff') format('woff'),
+        url('../fonts/Manrope-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('../fonts/Manrope-Medium.eot');
+    src: url('../fonts/Manrope-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Manrope-Medium.woff2') format('woff2'),
+        url('../fonts/Manrope-Medium.woff') format('woff'),
+        url('../fonts/Manrope-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('../fonts/Manrope-SemiBold.eot');
+    src: url('../fonts/Manrope-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Manrope-SemiBold.woff2') format('woff2'),
+        url('../fonts/Manrope-SemiBold.woff') format('woff'),
+        url('../fonts/Manrope-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Evolventa';
+    src: url('../fonts/Evolventa-Regular.eot');
+    src: url('../fonts/Evolventa-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Evolventa-Regular.woff2') format('woff2'),
+        url('../fonts/Evolventa-Regular.woff') format('woff'),
+        url('../fonts/Evolventa-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+body {
+    position: relative;
+    font-family: @userfont;
+    font-size: @fontsize;
+    line-height: @lineheight;
+    font-weight: 400;
+    color: @text;
+    background-color: @light;
+    // text-rendering: optimizeSpeed;
+    // -webkit-font-smoothing: antialiased;
+    // text-rendering: optimizeLegibility;
+    // position: relative;
+    min-width: 360px;
+    // letter-spacing: -0.01em;
+}
+
+.overflow {
+    overflow: hidden;
+}
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
+.tac {
+    text-align: center;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.color-w {
+    color: @light;
+}
+
+.bg-beige {
+    background-color: @beige;
+    color: @light;
+}
+
+.bg-light2 {
+    background-color: @light2;
+}
+
+.text-fade {
+    color: fade(@text, 50%);
+}
+
+.row {
+    .row-flex();
+}
+
+.col-6 {
+    .col();
+    .size(6);
+}
+
+.col-3 {
+    .col();
+    .size(3);
+}
+
+.col-md-6 {
+    .size-md(6);
+}
+
+.col-md-12 {
+    .size-md(12);
+}
+
+.col-xs-12 {
+    .size-xs(12);
+}
+
+.mt-0 {
+    margin-top: 0;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.mb-md-0 {
+    .md(margin-bottom, 0);
+}
+
+br {
+    .lg(display, none);
+}
+
+main {
+    min-height: 100vh;
+}
+
+section {
+    position: relative;
+    margin: 120px 0;
+
+    .md-block({
+        margin: 50px 0;
+    });
+}
+
+section.hero {
+    margin-top: 0;
+}
+
+.section-list {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+
+    .xs(font-size, 20px);
+
+    li {
+        margin-bottom: 20px;
+        .xs(margin-bottom, 10px);
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+.h1 {
+    font-family: 'Evolventa', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: -0.01em;
+
+    .md-block({
+        font-size: 28px;
+        letter-spacing: -0.02em;
+    });
+}
+
+.h2 {
+    font-family: 'Evolventa', sans-serif;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+
+    .md-block({
+        font-size: 26px;
+    });
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+  
+// Remove all mouse-triggered focus styles without breaking keyboard accessibility
+*:focus:not(:focus-visible) { 
+    outline: none !important; 
+}
+
+// fix safari
+input[type='submit'] { 
+	-webkit-appearance: none; 
+	-moz-appearance: none; 
+	appearance: none; 
+}
