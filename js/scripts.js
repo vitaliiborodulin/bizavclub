@@ -1,0 +1,161 @@
+$(function() {
+
+  const header = document.querySelector(".header");
+  const syncScrolledHeader = () => {
+    // const isDesktop = window.matchMedia("(min-width: 769px)").matches;
+    // header?.classList.toggle("header--scrolled", isDesktop && window.scrollY > 0 && !header.classList.contains("open"));
+    header?.classList.toggle("header--scrolled", window.scrollY > 0 && !header.classList.contains("open"));
+  };
+  
+  syncScrolledHeader();
+  window.addEventListener("scroll", syncScrolledHeader, { passive: true });
+  window.addEventListener("resize", syncScrolledHeader);
+  const burger = $('.burger');
+  const menu = $('.header');
+  
+  
+  burger.on('click', function(e) {
+      e.preventDefault();
+      burger.toggleClass('close');
+      menu.toggleClass('open');
+      $('html, body').toggleClass('overflow');
+      // syncScrolledHeader();
+  });
+  
+  $(document).keyup(function(e) {
+      if (e.key === "Escape" || e.keyCode === 27) {
+          menu.removeClass('open');
+          burger.removeClass('close');
+          $('html, body').removeClass('overflow');
+          // syncScrolledHeader();
+      }
+  });
+  
+  // if ($(window).width() <= 768) {
+  
+  //     $('body').on('click', '.header__menu a[href*="#"]', function(e) {
+  //         burger.toggleClass('burger-close');
+  //         menu.toggleClass('open');
+  //         $('html, body').removeClass('overflow');
+  //         syncScrolledHeader();
+  //     });
+  
+  // }
+  if ($(window).width() <= 1010) {
+  
+      $('.navigation__menu .menu-item-has-children > a').on('click', function(e) {
+          e.preventDefault();
+      });
+  
+      var submenu =  $('.navigation__menu .sub-menu');
+      var menuChildren = $(' .navigation__menu .menu-item-has-children');
+  
+  
+      menuChildren.on('click', function() {
+          
+          if ($(this).hasClass('active')){
+                  $(this).removeClass('active');
+                  $(this).find('.sub-menu').removeClass('open').hide();
+          } else {
+                  $(this).addClass('active');
+                  $(this).find('.sub-menu').addClass('open').show();
+          }
+          // $(this).find('.sub-menu').toggleClass('open').slideToggle();
+      });
+  
+      $(document).on('click', function (e) {
+      
+          if (!$('.navigation__menu .menu-item-has-children a').is(e.target) ){
+                  menuChildren.removeClass('active');
+                  submenu.removeClass('open').hide();
+          }
+  
+      });
+  
+  }
+  // $('.faq__item:first-child').find('.faq__header').addClass('active');
+  // $('.faq__item:first-child').find('.faq__body').show();
+  
+  $('.faq__header').on('click', function () {
+      const faqBody = $(this).next();
+  
+      if (!$(this).hasClass('active')){
+          $('.faq__header').removeClass('active');
+          $('.faq__body').slideUp(300);
+          $(this).addClass('active');
+          faqBody.slideDown(300);
+      } else {
+          $(this).removeClass('active');
+          faqBody.slideUp(300);
+      }
+  });
+  // fleet slider
+  
+  const servicesSlider = $('.services__slider');
+  
+  servicesSlider.slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      infinite: true,
+      // swipe: false,
+      // touchMove: false,
+      // draggable: false,
+      // swipeToSlide: false,
+      // fade: true,
+      // cssEase: 'linear',
+      nextArrow: $('.services .arrow-next'),
+      prevArrow: $('.services .arrow-prev'),
+      responsive: [
+          {
+              breakpoint: 1010,
+              settings: {
+                  slidesToShow: 3,
+              }
+          },
+          {
+              breakpoint: 768,
+              settings: {
+                  slidesToShow: 2,
+              }
+          },
+          {
+              breakpoint: 576,
+              settings: {
+              slidesToShow: 1,
+              centerMode: true,
+              // centerPadding: '60px',
+              }
+          },
+      ]
+  });
+  
+  const stepsSlider = $('.steps__slider');
+  
+  stepsSlider.slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      infinite: false,
+      adaptiveHeight: true,
+      // swipe: false,
+      // touchMove: false,
+      // draggable: false,
+      // swipeToSlide: false,
+      fade: true,
+      cssEase: 'linear',
+      nextArrow: $('.steps .arrow-next'),
+      prevArrow: $('.steps .arrow-prev'),
+  });
+  $('.popup-link').fancybox({
+      // thumbs : { autoStart:true },
+      toolbar: "auto",
+      infobar: true,
+      smallBtn: "auto",
+      protect: true,
+      loop: true,
+      iframe : {
+          preload : false
+      },
+      closeExisting : true
+  });
+
+});
