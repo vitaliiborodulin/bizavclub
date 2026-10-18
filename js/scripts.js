@@ -1,5 +1,8 @@
 $(function() {
 
+  // Проверяем, поддерживает ли устройство тач-скрин
+  const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
   const header = document.querySelector(".header");
   const syncScrolledHeader = () => {
     // const isDesktop = window.matchMedia("(min-width: 769px)").matches;
@@ -41,7 +44,7 @@ $(function() {
   //     });
   
   // }
-  if ($(window).width() <= 1010) {
+  if (isTouchDevice) {
   
       $('.navigation__menu .menu-item-has-children > a').on('click', function(e) {
           e.preventDefault();
@@ -60,17 +63,21 @@ $(function() {
                   $(this).addClass('active');
                   $(this).find('.sub-menu').addClass('open').show();
           }
-          // $(this).find('.sub-menu').toggleClass('open').slideToggle();
       });
   
-      $(document).on('click', function (e) {
-      
-          if (!$('.navigation__menu .menu-item-has-children a').is(e.target) ){
-                  menuChildren.removeClass('active');
-                  submenu.removeClass('open').hide();
-          }
   
+  
+  } else {
+  
+      $('.navigation__menu .menu-item-has-children').mouseenter(function() {
+          $(this).addClass('active');
+          $(this).children('.sub-menu').fadeIn();
+      }).mouseleave(function() {
+          $(this).removeClass('active');
+          $(this).children('.sub-menu').fadeOut();
       });
+  
+  
   
   }
   // $('.faq__item:first-child').find('.faq__header').addClass('active');
@@ -89,6 +96,38 @@ $(function() {
           faqBody.slideUp(300);
       }
   });
+  function switchTab(element) {
+      // Управляем кнопками
+      // $('.tab__btn').removeClass('active');
+      $(element).siblings().removeClass('active');
+      $(element).addClass('active');
+  
+      // Управляем контентом
+      let targetTab = $(element).data('tab');
+      // $('.tab__item').removeClass('active');
+      $('#' + targetTab).siblings().removeClass('active');
+      $('#' + targetTab).addClass('active');
+  }
+  
+  
+  
+  if (isTouchDevice) {
+      // На смартфонах и планшетах — переключаем по клику
+      $('.tab__btn').on('click', function() {
+          switchTab(this);
+      });
+  } else {
+      // На десктопах — переключаем по наведению (hover)
+      $('.tab__btn').on('mouseenter', function() {
+          switchTab(this);
+      });
+      
+      // Опционально: отменяем стандартный клик на десктопе, 
+      // чтобы при нажатии на кнопку ничего не происходило
+      $('.tab__btn').on('click', function(e) {
+        e.preventDefault();
+      });
+  }
   // fleet slider
   
   const servicesSlider = $('.services__slider');
