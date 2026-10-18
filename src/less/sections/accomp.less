@@ -1,0 +1,163 @@
+.accomp {
+
+    &__title {
+        margin-bottom: 48px;
+        .md(margin-bottom, 32px);
+    }
+
+    &__tab {
+
+        .tab__menu {
+            counter-reset: accomp 0;
+        }
+        
+        .tab__btn {
+            display: block;
+            position: relative;
+            width: 100%;
+            padding: 18px 40px 18px 66px;
+            border-bottom: 1px solid fade(@beige, 20%);
+            counter-increment: accomp 1;
+            
+            font-size: 20px;
+            font-weight: 500;
+
+            .md-block({
+                padding: 18px 32px 18px 42px;
+                font-size: 16px;
+            });
+
+            &::before {
+                position: absolute;
+                left: 16px;
+                top: 50%;
+                transform: translateY(-50%);
+                content: "0" counter(accomp);
+
+                font-family: 'Evolventa', sans-serif;
+                font-size: 30px;
+                font-weight: 400;
+                line-height: 110%;
+                letter-spacing: -0.01em;
+
+                color: @beige;
+
+                .md-block({
+                    left: 8px;
+                    font-size: 24px;
+                });
+            }
+
+            &::after {
+                position: absolute;
+                content: '';
+                right: 16px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 24px;
+                height: 24px;
+                background: url(../img/arrow-left.svg) no-repeat center;
+
+                .md(right, 8px);
+            }
+        }
+        
+        .tab__btn:first-of-type {
+            border-top: 1px solid fade(@beige, 20%);
+        }
+        
+        .tab__btn.active {
+            border-radius: 10px;
+            background-color: @beige;
+            color: @light;
+
+            &::before {
+                color: @light;
+            }
+
+            &::after {
+                background: url(../img/arrow-left-24-w.svg) no-repeat center;
+            }
+        }
+
+        .tab__content {
+            border-radius: 10px;
+            background: @blue_d url(../img/cta-bg-m.svg) no-repeat right top;
+
+            .md(margin-top, 20px);
+        }
+        
+        .tab__item {
+            // padding: 60px 40px;
+            padding: 40px;
+            color: @light;
+
+            .md-block({
+                padding: 32px 16px;
+            });
+        }
+
+    }
+
+    &__h3 {
+        margin-bottom: 32px;
+        font-family: 'Evolventa', sans-serif;
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 120%;
+        letter-spacing: -0.02em;
+
+        .md-block({
+            font-size: 26px;
+        });
+    }
+
+    &__item--buy,
+    &__item--sell {
+        position: relative;
+        padding-left: 40px;
+
+        &::before {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 0;
+
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    &__item--buy::before {
+        background: url(../img/bag.svg) no-repeat center;
+    }
+
+    &__item--sell::before {
+        background: url(../img/wallet.svg) no-repeat center;
+    }
+
+    &__item + &__item {
+        margin-top: 20px;
+    }
+
+    &__name {
+        margin-bottom: 8px;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 110%;
+        letter-spacing: -0.01em;
+
+        .md(font-size, 18px);
+    }
+
+    &__descr {
+        max-width: 350px;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 120%;
+        letter-spacing: 0em;
+        color: fade(@light, 80%);
+
+        .md(max-width, 100%);
+    }
+}
