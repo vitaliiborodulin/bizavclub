@@ -14,16 +14,6 @@
         .md(max-width, 100%);
     }
 
-    &__title {
-        font-family: 'Evolventa', sans-serif;
-        font-size: 36px;
-        font-weight: 400;
-        line-height: 120%;
-        letter-spacing: -0.02em;
-
-        .md(font-size, 26px);
-    }
-
     &__descr {
         margin-top: 20px;
         font-size: 20px;
@@ -32,6 +22,11 @@
         color: fade(@light, 80%);
 
         .md(font-size, 16px);
+
+        p + p {
+            margin-top: 20px;
+            .md(margin-top, 12px);
+        }
     }
 
     &__btn {
@@ -86,7 +81,8 @@
 }
 
 .page-concierge .conver,
-.page-cargo .conver {
+.page-cargo .conver,
+.page-group .conver {
     background: @beige url(../img/concierge-conver.jpg) no-repeat center/cover;
 
     .md-block({
@@ -99,6 +95,14 @@
 
     .md-block({
         background: @beige url(../img/concierge-conver-m.jpg) no-repeat center/cover;
+    });
+}
+
+.page-helic-rent .conver {
+    background: @beige url(../img/helic-conver.jpg) no-repeat center/cover;
+
+    .md-block({
+        background: @beige url(../img/helic-conver-m.jpg) no-repeat center/cover;
     });
 }
 

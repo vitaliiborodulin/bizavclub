@@ -1,0 +1,103 @@
+.story {
+    padding: 100px 0;
+    background: @beige url(../img/story-cover.jpg) no-repeat center/cover;
+
+    .md-block({
+        padding: 50px 0;
+    });
+
+    &__title {
+        color: @light;
+    }
+
+    &__subtitle {
+        margin-top: 20px;
+        max-width: 700px;
+        font-size: 20px;
+        line-height: 130%;
+        letter-spacing: 0em;
+        color: fade(@light, 80%)
+    }
+
+    &__cards {
+        .row-flex();
+
+        margin-top: 60px;
+        counter-reset: story 0;
+
+        .md(margin-top, 32px);
+    }
+
+    &__card {
+        .col();
+        .size(4);
+        .size-lg(6);
+        .size-md(12);
+
+        position: relative;
+        padding: 86px 20px 24px;
+        margin-bottom: 24px;
+
+        background-color: @light;
+        border-radius: 10px;
+        counter-increment: story 1;
+
+        .md-block({
+            margin-bottom: 0;
+            padding: 20px 80px 20px 16px;
+        });
+
+        &::before {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            content: "0" counter(story);
+            font-size: 15px;
+            font-weight: 500;
+            text-align: center;
+            line-height: 40px;
+            letter-spacing: 0em;
+
+            color: @text;
+            background-color: @light2;
+        }
+    }
+
+    &__card + &__card {
+        .md(margin-top, 8px);
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    &__name {
+        margin-top: auto;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 110%;
+        letter-spacing: -0.01em;
+
+        .md(font-size, 18px);
+    }
+
+    &__descr {
+        margin-top: 12px;
+        color: @text1;
+
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 120%;
+        letter-spacing: 0em;
+
+        .md-block({
+            margin-top: 8px;
+            font-size: 13px;
+        });
+    }
+}
