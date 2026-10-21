@@ -16,8 +16,9 @@
 
 	<link rel="stylesheet" href="css/slick.css">
 	<link rel="stylesheet" href="css/jquery.fancybox.min.css">
+	<link rel="stylesheet" href="css/flatpickr.min.css">
 
-	<link rel="stylesheet" href="css/styles.css?v=2">
+	<link rel="stylesheet" href="css/styles.css?v=3">
 </head>
 
 <body class="page-group page-header-w">
@@ -98,6 +99,42 @@
 		            <div class="col-6 col-md-12">
 		                <h1 class="h1">Групповые перевозки <br> под ключ</h1>
 		                <div class="hero__descr">Персональное расписание, подходящий самолёт <br> и единая команда, контролирующая весь маршрут.</div>
+		            </div>
+		
+		            <div class="col-6 col-md-12">
+		                <div class="hero__form">
+		                    <div class="hero__form-title">БЫСТРЫЙ ЗАПРОС НА РЕЙС</div>
+		                    <form class="form">
+		                        <div class="form__grid">
+		                            <div class="form__input form__input--icon form__input--from">
+		                                <input type="text" class="w-100" name="from" placeholder="Откуда">
+		                            </div>
+		                            <div class="form__input form__input--icon form__input--place">
+		                                <input type="text" class="w-100" name="place" placeholder="Куда">
+		                            </div>
+		                            <div class="form__input form__input--icon form__input--cal">
+		                                <input type="text" class="cal w-100" name="cal" class="cal" placeholder="Дата">
+		                            </div>
+		                            <div class="form__input form__input--people">
+		                                <button type="button" class="minus">-</button>
+		                                <input type="number" name="people" value="1" min="1">
+		                                <span>Пассажир</span>
+		                                <button type="button" class="plus">+</button>
+		                            </div>
+		                            <div class="form__input form__input--name">
+		                                <input type="text" class="w-100" name="name" placeholder="Ваше имя*" required>
+		                            </div>
+		                            <div class="form__input form__input--tel">
+		                                <input type="text" class="w-100" name="tel" placeholder="Номер телефона*" required>
+		                            </div>
+		                        </div>
+		                        <div class="form__checkbox">
+		                            <input type="checkbox" name="return" id="return">
+		                            <label for="return" class="form__checkbox-text">Подобрать обратный рейс</label>
+		                        </div>
+		                        <button type="submit" class="btn w-100 hero__form-btn"><span>Получить варианты</span></button>
+		                    </form>
+		                </div>
 		            </div>
 		
 		        </div>
@@ -340,8 +377,44 @@
 		
 		    </div>
 		</section>
-
-
+		<section class="tell">
+		    <div class="container">
+		        <div class="tell__content">
+		
+		            <div class="tell__info">
+		                <h2 class="h2 tell__title">Сервис и дополнительные возможности</h2>
+		                <div class="tell__descr">Расскажите нам не только куда нужно лететь, но и какую <br> задачу должен решить перелёт. Мы выстроим авиационную <br> и наземную логистику вокруг вашей программы.</div>
+		                <a href="#" class="btn btn-w tell__btn"><span>Запросить предложение</span></a>
+		            </div>
+		
+		            <div class="tell__list">
+		
+		                <div class="tell__item">
+		                    <h3 class="tell__name">Выделенное аэропортовое сопровождение</h3>
+		                    <div class="tell__text">Помогаем организовать процессы регистрации и координации пассажиров.</div>
+		                </div>
+		                <div class="tell__item">
+		                    <h3 class="tell__name">Трансфер</h3>
+		                    <div class="tell__text">Организуем наземную логистику для группы до аэропорта и после прибытия.</div>
+		                </div>
+		                <div class="tell__item">
+		                    <h3 class="tell__name">Кейтеринг</h3>
+		                    <div class="tell__text">Согласуем питание и специальные пожелания для пассажиров.</div>
+		                </div>
+		                <div class="tell__item">
+		                    <h3 class="tell__name">Багаж и оборудование</h3>
+		                    <div class="tell__text">Заранее учитываем нестандартный или крупногабаритный багаж.</div>
+		                </div>
+		                <div class="tell__item">
+		                    <h3 class="tell__name">Консьерж-сервис</h3>
+		                    <div class="tell__text">Организуем дополнительный сервис под запрос группы — от бронирования отеля до подготовки мероприятия.</div>
+		                </div>
+		
+		            </div>
+		
+		        </div>
+		    </div>
+		</section>
 		<section class="faq" id="faq">
 		    <div class="container">
 		        <h2 class="h2">FAQ</h2>
@@ -388,6 +461,31 @@
 		            </div>
 		        </div>
 		
+		    </div>
+		</section>
+		<section class="cform">
+		    <div class="container">
+		        <div class="cform__content">
+		            <h2 class="h2">Рассчитаем групповой перелёт под вашу задачу</h2>
+		            <form class="form cform__form">
+		                 <div class="form__input form__input--icon form__input--from">
+		                    <input type="text" class="w-100" name="from" placeholder="Откуда">
+		                </div>
+		                <div class="form__input form__input--icon form__input--place">
+		                    <input type="text" class="w-100" name="place" placeholder="Куда">
+		                </div>
+		                <div class="form__input form__input--icon form__input--cal">
+		                    <input type="text" class="cal w-100" name="cal" class="cal" placeholder="Дата">
+		                </div>
+		                <div class="form__input form__input--people">
+		                    <button type="button" class="minus">-</button>
+		                    <input type="number" name="people" value="1" min="1">
+		                    <span>Пассажир</span>
+		                    <button type="button" class="plus">+</button>
+		                </div>
+		                <button type="submit" class="btn btn-w cform__btn"><span>Рассчитать перелет</span></button>
+		            </form>
+		        </div>
 		    </div>
 		</section>
 		
@@ -492,8 +590,9 @@
 	<!-- scripts -->
 	<script src="js/jquery-3.7.1.min.js"></script>
 	<script src="js/jquery.fancybox.min.js"></script>
+	<script src="js/flatpickr.min.js"></script>
 	<script src="js/slick.min.js"></script>
-	<script src="js/scripts.js?v=2"></script>
+	<script src="js/scripts.js?v=3"></script>
 	<!-- end scripts -->
 
 </body>
