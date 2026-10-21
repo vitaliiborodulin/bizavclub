@@ -71,13 +71,11 @@ $(function() {
   
       $('.navigation__menu .menu-item-has-children').mouseenter(function() {
           $(this).addClass('active');
-          $(this).children('.sub-menu').fadeIn();
+          $(this).children('.sub-menu').stop(true, true).fadeIn();
       }).mouseleave(function() {
           $(this).removeClass('active');
-          $(this).children('.sub-menu').fadeOut();
+          $(this).children('.sub-menu').stop(true, true).fadeOut();
       });
-  
-  
   
   }
   $(".cal").flatpickr({
@@ -119,6 +117,14 @@ $(function() {
           faqBody.slideUp(300);
       }
   });
+  if (!isTouchDevice) {
+  
+      $('.trust__item').mouseenter(function() {
+          $(this).find('.trust__descr').stop(true, true).slideDown(500);
+      }).mouseleave(function() {
+          $(this).find('.trust__descr').stop(true, true).slideUp(500);
+      });
+  }
   function switchTab(element) {
       // Управляем кнопками
       // $('.tab__btn').removeClass('active');

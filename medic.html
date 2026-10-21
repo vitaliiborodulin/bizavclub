@@ -18,7 +18,7 @@
 	<link rel="stylesheet" href="css/jquery.fancybox.min.css">
 	<link rel="stylesheet" href="css/flatpickr.min.css">
 
-	<link rel="stylesheet" href="css/styles.css?v=3">
+	<link rel="stylesheet" href="css/styles.css?v=4">
 </head>
 
 <body class="page-medic page-header-w">
@@ -79,7 +79,7 @@
 
 	<main>
 
-		<section class="hero page-hero color-w">
+		<section class="hero hero--form color-w">
 		    <div class="container">
 		
 		        <div class="breadcrumbs">
@@ -99,6 +99,42 @@
 		            <div class="col-6 col-md-12">
 		                <h1 class="h1">Медицинские <br> авиаперевозки</h1>
 		                <div class="hero__descr">Авиационная перевозка с учетом <br>медицинских и логистических требований <br> конкретной ситуации.</div>
+		            </div>
+		
+		            <div class="col-6 col-md-12">
+		                <div class="hero__form">
+		                    <div class="hero__form-title">БЫСТРЫЙ ЗАПРОС НА РЕЙС</div>
+		                    <form class="form">
+		                        <div class="form__grid">
+		                            <div class="form__input form__input--icon form__input--from">
+		                                <input type="text" class="w-100" name="from" placeholder="Откуда">
+		                            </div>
+		                            <div class="form__input form__input--icon form__input--place">
+		                                <input type="text" class="w-100" name="place" placeholder="Куда">
+		                            </div>
+		                            <div class="form__input form__input--icon form__input--cal">
+		                                <input type="text" class="cal w-100" name="cal" class="cal" placeholder="Дата">
+		                            </div>
+		                            <div class="form__input form__input--people">
+		                                <button type="button" class="minus">-</button>
+		                                <input type="number" name="people" value="1" min="1">
+		                                <span>Пассажир</span>
+		                                <button type="button" class="plus">+</button>
+		                            </div>
+		                            <div class="form__input form__input--name">
+		                                <input type="text" class="w-100" name="name" placeholder="Ваше имя*" required>
+		                            </div>
+		                            <div class="form__input form__input--tel">
+		                                <input type="text" class="w-100" name="tel" placeholder="Номер телефона*" required>
+		                            </div>
+		                        </div>
+		                        <div class="form__checkbox">
+		                            <input type="checkbox" name="return" id="return">
+		                            <label for="return" class="form__checkbox-text">Подобрать обратный рейс</label>
+		                        </div>
+		                        <button type="submit" class="btn w-100 hero__form-btn"><span>Получить варианты</span></button>
+		                    </form>
+		                </div>
 		            </div>
 		
 		        </div>
@@ -366,7 +402,64 @@
 		</section>
 		<section class="trust">
 		    <div class="container">
-		        trust
+		        <div class="trust__content">
+		
+		            <div class="trust__text">
+		                <h2 class="h2 trust__title">Опыт организации маршрутов повышенной сложности</h2>
+		                <div class="trust__subtitle">Преимущества:</div>
+		
+		                <div class="trust__img d-none d-md-block">
+		                    <img src="img/trust.jpg" alt="">
+		                </div>
+		
+		                <div class="trust__list">
+		
+		                    <div class="trust__item">
+		                        <div class="trust__pic"><img src="img/star.svg" alt="" width="24" height="24"></div>
+		                        <div class="trust__name">20+ лет опыта</div>
+		                        <div class="trust__descr">Работаем на международном рынке бизнес-авиации более двух десятилетий.</div>
+		                    </div>
+		
+		                    <div class="trust__item">
+		                        <div class="trust__pic"><img src="img/location.svg" alt="" width="24" height="24"></div>
+		                        <div class="trust__name">Международная сеть</div>
+		                        <div class="trust__descr">Подбираем оптимальные решения в любой точке мира.</div>
+		                    </div>
+		
+		                    <div class="trust__item">
+		                        <div class="trust__pic"><img src="img/add-user.svg" alt="" width="24" height="24"></div>
+		                        <div class="trust__name">Персональное сопровождение</div>
+		                        <div class="trust__descr">От первого обращения до завершения перелёта.</div>
+		                    </div>
+		
+		                    <div class="trust__item">
+		                        <div class="trust__pic"><img src="img/shield.svg" alt="" width="24" height="24"></div>
+		                        <div class="trust__name">Конфиденциальность</div>
+		                        <div class="trust__descr">Все взаимодействие происходит с полной защитой вашей информации.</div>
+		                    </div>
+		
+		                    <div class="trust__item">
+		                        <div class="trust__pic"><img src="img/loading.svg" alt="" width="24" height="24"></div>
+		                        <div class="trust__name">Доступ к широкой партнерской сети авиакомпаний</div>
+		                        <div class="trust__descr">Эксклюзивные предложения благодаря партнёрской сети.</div>
+		                    </div>
+		
+		                    <div class="trust__item">
+		                        <div class="trust__pic"><img src="img/message.svg" alt="" width="24" height="24"></div>
+		                        <div class="trust__name">Поддержка 24/7</div>
+		                        <div class="trust__descr">Остаёмся на связи независимо от времени суток.</div>
+		                    </div>
+		
+		                </div>
+		
+		            </div>
+		
+		            <div class="trust__img d-md-none">
+		                <img src="img/trust.jpg" alt="">
+		            </div>
+		
+		        </div>
+		
 		    </div>
 		</section>
 		<section class="faq" id="faq">
@@ -529,7 +622,7 @@
 	<script src="js/jquery.fancybox.min.js"></script>
 	<script src="js/flatpickr.min.js"></script>
 	<script src="js/slick.min.js"></script>
-	<script src="js/scripts.js?v=3"></script>
+	<script src="js/scripts.js?v=4"></script>
 	<!-- end scripts -->
 
 </body>
