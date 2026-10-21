@@ -8,12 +8,16 @@
 
     .md-block({
         padding-top: 80px;
-        min-height: 720px;
+        min-height: 640px;
     });
 
     &__content {
+        position: relative;
         padding-top: 80px;
-        .md(padding-top, 32px);
+        
+        .md-block({
+            padding-top: 32px;
+        });
     }
 
     &__descr {
@@ -31,8 +35,137 @@
 
     &__btn {
         margin-top: 48px;
-        .md(margin-top, 32px);
+        .md(margin-top, 24px);
     }
+
+    &__form {
+        // max-width: 600px;
+        padding: 32px;
+
+        background-color: fade(@light, 10%);
+        backdrop-filter: blur(36px);
+        border-radius: 10px;
+
+        .md-block({
+            // margin-top: 220px;
+            position: absolute;
+            z-index: 2;
+            top: 90%;
+            left: 0;
+            width: 100%;
+            padding: 24px 16px;
+            background-color: @light2;
+        });
+
+        
+
+        // .form {
+        //     display: flex;
+        //     flex-wrap: wrap;
+        //     gap: 14px;
+        // }
+
+        // .form__input {
+        //     width: 260px;
+        // }
+    }
+
+    .form__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+            "from place"
+            "cal people"
+            "name tel";
+        gap: 14px;
+        width: 100%;
+
+        .md-block({
+            grid-template-rows: repeat(5, 1fr);
+            grid-template-areas:
+                "from from"
+                "place place"
+                "cal people"
+                "name name"
+                "tel tel";
+            gap: 8px;
+        });
+    }
+
+    &__form-title {
+        margin-bottom: 32px;
+        font-size: 20px;
+        line-height: 110%;
+        letter-spacing: -0.01em;
+        text-transform: uppercase;
+        color: @light;
+
+        .md-block({
+            margin-bottom: 24px;
+            color: @text;
+        });
+    }
+
+    .form__input--from {
+        grid-area: from;
+    }
+
+    .form__input--place {
+        grid-area: place;
+    }
+
+    .form__input--cal {
+        grid-area: cal;
+    }
+
+    .form__input--people {
+        grid-area: people;
+    }
+
+    .form__input--name {
+        grid-area: name;
+    }
+    .form__input--tel {
+        grid-area: tel;
+    }
+
+    &__form-btn {
+        margin-top: 32px;
+        .md(margin-top, 24px);
+    }
+
+    .form__checkbox {
+        margin-top: 16px;
+        .md(color, @text1);
+
+        input {
+            .md(border-color, @text1)
+        }
+
+        input::before {
+            .md(background-color, @text1)
+        }
+    }
+}
+
+.hero.page-hero {
+    padding-bottom: 180px;
+    min-height: auto;
+
+    .md-block({
+         padding-bottom: 0;
+    });
+
+    .hero__content {
+       .md-block({
+         min-height: 350px;
+       })
+    }
+}
+
+.page-hero + section {
+    .md(margin-top, 530px);
 }
 
 .color-w.hero {
@@ -75,9 +208,9 @@
 .page-group .hero {
     background-image: url('../img/group-hero.jpg');
 
-    // .md-block({
-    //     background-image: url('../img/about-hero-m.jpg');
-    // });
+    .xs-block({
+        background-image: url('../img/group-hero-m.jpg');
+    });
 }
 
 .page-helic-rent .hero {
@@ -108,7 +241,7 @@
 .page-sell .hero {
     background: url('../img/sell-hero.jpg') no-repeat center/cover;
 
-    .md-block({
+    .xs-block({
         background: url('../img/sell-hero-m.jpg') no-repeat center bottom/cover;
     });
 }
@@ -116,7 +249,7 @@
 .page-commerce .hero {
     background: url('../img/commerce-hero.jpg') no-repeat center/cover;
 
-    .md-block({
+    .xs-block({
         background: url('../img/commerce-hero-m.jpg') no-repeat center bottom/cover;
     });
 }
@@ -124,7 +257,7 @@
 .page-cargo .hero {
     background: url('../img/cargo-hero.jpg') no-repeat center/cover;
 
-    .md-block({
+    .xs-block({
         background: url('../img/cargo-hero-m.jpg') no-repeat center bottom/cover;
     });
 }

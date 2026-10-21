@@ -22,20 +22,16 @@
     .wrapper();
 }
 
-// ::placeholder {
-// 	color: fade(@black, 40%);
-// }
-
 // ::selection {
 // 	background-color: fade(@accent, 30%);
 // 	color: @black;
 // }
 
-// input, textarea {
-// 	outline: none;
-// 	&:focus:required:invalid { border: 1px solid @accent2 }
-// 	&:required:valid { border: 1px solid green }
-// }
+input, textarea {
+	outline: none;
+	// &:focus:required:invalid { border: 1px solid red }
+	// &:required:valid { border: 1px solid green }
+}
 
 
 
@@ -71,6 +67,18 @@
         url('../fonts/Manrope-SemiBold.woff') format('woff'),
         url('../fonts/Manrope-SemiBold.ttf') format('truetype');
     font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('../fonts/Manrope-Bold.eot');
+    src: url('../fonts/Manrope-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Manrope-Bold.woff2') format('woff2'),
+        url('../fonts/Manrope-Bold.woff') format('woff'),
+        url('../fonts/Manrope-Bold.ttf') format('truetype');
+    font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
@@ -116,6 +124,10 @@ body {
     margin: -1px;
 }
 
+.w-100 {
+    width: 100%;
+}
+
 .tac {
     text-align: center;
 }
@@ -141,6 +153,8 @@ body {
     color: fade(@text, 50%);
 }
 
+// constructor
+
 .row {
     .row-flex();
 }
@@ -157,6 +171,10 @@ body {
 
 .col-md-6 {
     .size-md(6);
+}
+
+.col-lg-12 {
+    .size-lg(12);
 }
 
 .col-md-12 {
@@ -182,6 +200,8 @@ body {
 br {
     .lg(display, none);
 }
+
+// 
 
 main {
     min-height: 100vh;

@@ -6,6 +6,7 @@ $(function() {
   //= components/header
   //= components/burger
   //= components/submenu
+  //= components/form
   //= components/faq
   //= components/tab
   //= components/slider

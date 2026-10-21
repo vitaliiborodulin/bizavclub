@@ -1,0 +1,80 @@
+.cform {
+
+    .md-block({
+        background: @beige url(../img/cta-bg-m.svg) no-repeat right top/contain;
+    });
+
+    &__content {
+        padding: 60px;
+
+        color: @light;
+        background: @beige url(../img/cta-bg.svg) no-repeat right center;
+
+        border-radius: 10px;
+
+        .md-block({
+            padding: 50px 0;
+            background: none;
+            border-radius: 0;
+        })
+    }
+
+    &__form {
+        margin-top: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+
+        .md-block({
+            margin-top: 32px;
+            justify-content: space-between;
+        });
+    }
+
+    .form__input {
+        width: 230px;
+        color: @light;
+        background-color: fade(@light, 10%);
+        backdrop-filter: blur(4px);
+
+        .md(width, 100%);
+
+        input::placeholder {
+            color: @light;
+        }
+    }
+
+    .form__input--from::before {
+        background: url(../img/from-w.svg) no-repeat center;
+    }
+    .form__input--place::before {
+        background: url(../img/to-w.svg) no-repeat center;
+    }
+
+    .form__input--cal {
+
+        .md-block({
+            width: 48%;
+        });
+
+        &::before {
+            background: url(../img/cal-w.svg) no-repeat center;
+        }
+    }
+
+    .form__input--people {
+
+        .md-block({
+            width: 48%;
+        });
+        
+        .plus, .minus {
+            color: @light;
+            border-color: @light;
+        }
+    }
+
+    &__btn {
+        .md(width, 100%);
+    }
+}
