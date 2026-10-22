@@ -157,8 +157,6 @@ $(function() {
         e.preventDefault();
       });
   }
-  // fleet slider
-  
   const servicesSlider = $('.services__slider');
   
   servicesSlider.slick({
@@ -212,6 +210,33 @@ $(function() {
       cssEase: 'linear',
       nextArrow: $('.steps .arrow-next'),
       prevArrow: $('.steps .arrow-prev'),
+  });
+  
+  const shipSlider = $('.ship__slider');
+  
+  shipSlider.slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      // swipe: false,
+      // touchMove: false,
+      // draggable: false,
+      // swipeToSlide: false,
+      nextArrow: $('.ship .arrow-next'),
+      prevArrow: $('.ship .arrow-prev'),
+       responsive: [
+          {
+              breakpoint: 1010,
+              settings: {
+                  slidesToShow: 2,
+              }
+          },
+          {
+              breakpoint: 576,
+              settings: {
+                  slidesToShow: 1,
+              }
+          },
+      ]
   });
   $('.popup-link').fancybox({
       // thumbs : { autoStart:true },

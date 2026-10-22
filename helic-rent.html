@@ -18,7 +18,7 @@
 	<link rel="stylesheet" href="css/jquery.fancybox.min.css">
 	<link rel="stylesheet" href="css/flatpickr.min.css">
 
-	<link rel="stylesheet" href="css/styles.css?v=4">
+	<link rel="stylesheet" href="css/styles.css?v=5">
 </head>
 
 <body class="page-helic-rent page-header-w">
@@ -79,7 +79,7 @@
 
 	<main>
 
-		<section class="hero page-hero color-w">
+		<section class="hero hero--form color-w">
 		    <div class="container">
 		
 		        <div class="breadcrumbs">
@@ -101,6 +101,42 @@
 		                <div class="hero__descr">Организуем частный вертолётный перелёт <br> по индивидуальному маршруту и синхронизируем <br> его с вашим расписанием.</div>
 		            </div>
 		
+		            <div class="col-6 col-md-12">
+		                <div class="hero__form">
+		                    <div class="hero__form-title">БЫСТРЫЙ ЗАПРОС НА РЕЙС</div>
+		                    <form class="form">
+		                        <div class="form__grid">
+		                            <div class="form__input form__input--icon form__input--from">
+		                                <input type="text" class="w-100" name="from" placeholder="Откуда">
+		                            </div>
+		                            <div class="form__input form__input--icon form__input--place">
+		                                <input type="text" class="w-100" name="place" placeholder="Куда">
+		                            </div>
+		                            <div class="form__input form__input--icon form__input--cal">
+		                                <input type="text" class="cal w-100" name="cal" class="cal" placeholder="Дата">
+		                            </div>
+		                            <div class="form__input form__input--people">
+		                                <button type="button" class="minus">-</button>
+		                                <input type="number" name="people" value="1" min="1">
+		                                <span>Пассажир</span>
+		                                <button type="button" class="plus">+</button>
+		                            </div>
+		                            <div class="form__input form__input--name">
+		                                <input type="text" class="w-100" name="name" placeholder="Ваше имя*" required>
+		                            </div>
+		                            <div class="form__input form__input--tel">
+		                                <input type="text" class="w-100" name="tel" placeholder="Номер телефона*" required>
+		                            </div>
+		                        </div>
+		                        <div class="form__checkbox">
+		                            <input type="checkbox" name="return" id="return">
+		                            <label for="return" class="form__checkbox-text">Подобрать обратный рейс</label>
+		                        </div>
+		                        <button type="submit" class="btn w-100 hero__form-btn"><span>Получить варианты</span></button>
+		                    </form>
+		                </div>
+		            </div>
+		
 		        </div>
 		    </div>
 		</section>
@@ -111,7 +147,7 @@
 		            <div class="services__header">
 		                
 		                <div class="services__headers">
-		                    <h2 class="services__title">Для маршрутов, где особенно важно время</h2>
+		                    <h2 class="h2 services__title">Для маршрутов, где особенно важно время</h2>
 		                    <div class="services__subtitle">Организуем вертолётный перелёт как самостоятельный маршрут или как часть комплексной поездки.</div>
 		                </div>
 		
@@ -235,7 +271,86 @@
 		        </div>
 		    </div>
 		</section>
-
+		<section class="ship bg-light2 mt-0">
+		    <div class="container">
+		        <div class="ship__content">
+		
+		            <div class="ship__header">
+		                
+		                <div class="ship__headers">
+		                    <h2 class="h2 ship__title">Вертолёт под вашу задачу</h2>
+		                    <div class="ship__subtitle">Учитываем количество пассажиров, маршрут, багаж и требования к уровню комфорта.</div>
+		                </div>
+		
+		                <div class="arrows">
+		                    <div class="arrow arrow-prev">Prev</div>
+		                    <div class="arrow arrow-next">Next</div>
+		                </div>
+		            </div>
+		
+		            <div class="ship__slider">
+		
+		                <div class="ship__slide">
+		                    <div class="ship__inner">
+		                        <div class="ship__img">
+		                            <img src="img/helic.jpg" alt="">
+		                        </div>
+		                        <h3 class="ship__h3">Embraer Legacy 600</h3>
+		                        <div class="ship__descr">Гибкие маршруты 1</div>
+		                        <ul class="ship__badges">
+		                            <li class="ship__badge ship__badge--count">10 человек</li>
+		                            <li class="ship__badge ship__badge--distance">11 020 км</li>
+		                        </ul>
+		                    </div>
+		                </div>
+		
+		                <div class="ship__slide">
+		                    <div class="ship__inner">
+		                        <div class="ship__img">
+		                            <img src="img/helic.jpg" alt="">
+		                        </div>
+		                        <h3 class="ship__h3">Embraer Legacy 600</h3>
+		                        <div class="ship__descr">Гибкие маршруты 2</div>
+		                        <ul class="ship__badges">
+		                            <li class="ship__badge ship__badge--count">10 человек</li>
+		                            <li class="ship__badge ship__badge--distance">11 020 км</li>
+		                        </ul>
+		                    </div>
+		                </div>
+		
+		                <div class="ship__slide">
+		                    <div class="ship__inner">
+		                        <div class="ship__img">
+		                            <img src="img/helic.jpg" alt="">
+		                        </div>
+		                        <h3 class="ship__h3">Embraer Legacy 600</h3>
+		                        <div class="ship__descr">Гибкие маршруты 3</div>
+		                        <ul class="ship__badges">
+		                            <li class="ship__badge ship__badge--count">10 человек</li>
+		                            <li class="ship__badge ship__badge--distance">11 020 км</li>
+		                        </ul>
+		                    </div>
+		                </div>
+		
+		                <div class="ship__slide">
+		                    <div class="ship__inner">
+		                        <div class="ship__img">
+		                            <img src="img/helic.jpg" alt="">
+		                        </div>
+		                        <h3 class="ship__h3">Embraer Legacy 600</h3>
+		                        <div class="ship__descr">Гибкие маршруты 4</div>
+		                        <ul class="ship__badges">
+		                            <li class="ship__badge ship__badge--count">10 человек</li>
+		                            <li class="ship__badge ship__badge--distance">11 020 км</li>
+		                        </ul>
+		                    </div>
+		                </div>
+		
+		            </div>
+		
+		        </div>
+		    </div>
+		</section>
 		<section class="steps">
 		    <div class="container">
 		        
@@ -396,6 +511,31 @@
 		
 		    </div>
 		</section>
+		<section class="cform cform--helic">
+		    <div class="container">
+		        <div class="cform__content">
+		            <h2 class="h2">Подберём вертолёт под ваш маршрут</h2>
+		            <form class="form cform__form">
+		                 <div class="form__input form__input--icon form__input--from">
+		                    <input type="text" class="w-100" name="from" placeholder="Откуда">
+		                </div>
+		                <div class="form__input form__input--icon form__input--place">
+		                    <input type="text" class="w-100" name="place" placeholder="Куда">
+		                </div>
+		                <div class="form__input form__input--icon form__input--cal">
+		                    <input type="text" class="cal w-100" name="cal" class="cal" placeholder="Дата">
+		                </div>
+		                <div class="form__input form__input--people">
+		                    <button type="button" class="minus">-</button>
+		                    <input type="number" name="people" value="1" min="1">
+		                    <span>Пассажир</span>
+		                    <button type="button" class="plus">+</button>
+		                </div>
+		                <button type="submit" class="btn btn-w cform__btn"><span>Рассчитать перелет</span></button>
+		            </form>
+		        </div>
+		    </div>
+		</section>
 
 	</main>
 
@@ -500,7 +640,7 @@
 	<script src="js/jquery.fancybox.min.js"></script>
 	<script src="js/flatpickr.min.js"></script>
 	<script src="js/slick.min.js"></script>
-	<script src="js/scripts.js?v=4"></script>
+	<script src="js/scripts.js?v=5"></script>
 	<!-- end scripts -->
 
 </body>
