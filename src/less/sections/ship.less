@@ -1,0 +1,114 @@
+.ship {
+    padding: 100px 0;
+
+    .md-block({
+        padding: 50px 0;
+    });
+
+    &__header {
+        margin-bottom: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        .md-block({
+            margin-bottom: 32px;
+            display: block;
+        });
+
+    }
+
+    .arrows {
+        .md(margin-top, 16px);
+    }
+
+    &__subtitle {
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 130%;
+        letter-spacing: 0;
+        color: @text1;
+
+        .md-block({
+            margin-top: 16px;
+            font-size: 16px;
+        });
+    }
+
+    &__img {
+        margin-bottom: 24px;
+        width: 100%;
+        height: 220px;
+        border-radius: 10px;
+        overflow: hidden;
+
+        .md(margin-bottom, 20px);
+
+        img {
+            border-radius: inherit;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__h3 {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 110%;
+        letter-spacing: -0.01em;
+
+        .md(font-size, 18px);
+    }
+
+    &__descr {
+        margin: 12px 0;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 120%;
+        letter-spacing: 0em;
+        color: @text1;
+
+        .md(font-size, 13px);
+    }
+
+    &__badges {
+        margin-top: 24px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+
+        .md(margin-top, 20px);
+    }
+
+    &__badge {
+        position: relative;
+        padding: 8px;
+        padding-left: 40px;
+
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 120%;
+        letter-spacing: 0em;
+
+        color: @text1;
+        background-color: @light;
+        border-radius: 10px;
+
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: 8px center;
+
+        .md(font-size, 13px);
+    }
+    
+    &__badge--count {
+        background-image: url(../img/users.svg);
+    }
+
+    &__badge--distance {
+        background-image: url(../img/lightning.svg);
+    }
+
+}

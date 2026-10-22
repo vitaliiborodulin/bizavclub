@@ -25,12 +25,10 @@ if (isTouchDevice) {
 
     $('.navigation__menu .menu-item-has-children').mouseenter(function() {
         $(this).addClass('active');
-        $(this).children('.sub-menu').fadeIn();
+        $(this).children('.sub-menu').stop(true, true).fadeIn();
     }).mouseleave(function() {
         $(this).removeClass('active');
-        $(this).children('.sub-menu').fadeOut();
+        $(this).children('.sub-menu').stop(true, true).fadeOut();
     });
-
-
 
 }

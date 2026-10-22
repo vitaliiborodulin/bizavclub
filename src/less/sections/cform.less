@@ -78,3 +78,38 @@
         .md(width, 100%);
     }
 }
+
+.cform.cform--helic {
+    
+    .xs(padding-top, 120px);
+
+    .md-block({
+        background: url(../img/helic-rent-cform.png) no-repeat right center/contain, 
+        @beige url(../img/cta-bg-m.svg) no-repeat right top/contain;
+    });
+
+    .xs-block({
+        background: url(../img/helic-rent-cform-m.png) no-repeat right top,
+        @beige url(../img/cta-bg-m.svg) no-repeat right top/contain;
+    });
+
+    .cform__content {
+        background: url(../img/helic-rent-cform.png) no-repeat right center/contain, 
+        @beige url(../img/cta-bg.svg) no-repeat right center;
+
+        .md(background, none);
+    }
+    .form__input {
+        width: 200px;
+        .md(width, 100%);
+    }
+    .form__input--cal,
+    .form__input--people {
+        .md(width, 48%);
+    }
+    .cform__btn {
+        width: 355px;
+        max-width: 100%;
+        .md(width, 100%);
+    }
+}

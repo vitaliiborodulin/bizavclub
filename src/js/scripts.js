@@ -8,6 +8,7 @@ $(function() {
   //= components/submenu
   //= components/form
   //= components/faq
+  //= components/trust
   //= components/tab
   //= components/slider
   //= components/popup
