@@ -425,6 +425,10 @@ section.hero {
   letter-spacing: -0.02em;
 }
 
+.h2 span {
+  color: #B8A282;
+}
+
 *:focus:not(:focus-visible) {
   outline: none !important;
 }
@@ -1152,7 +1156,7 @@ input[type='submit'] {
 
 .hero__content {
   position: relative;
-  padding-top: 80px;
+  padding-top: 65px;
 }
 
 .hero__descr {
@@ -1255,7 +1259,7 @@ input[type='submit'] {
 }
 
 .page-helic-rent .hero {
-  background: url('../img/helic-rent-hero.jpg') no-repeat center bottom / cover;
+  background: url('../img/helic-rent-hero.jpg') no-repeat center / cover;
 }
 
 .page-medic .hero {
@@ -2174,6 +2178,7 @@ input[type='submit'] {
 .cform.cform--helic .cform__btn {
   width: 355px;
   max-width: 100%;
+  margin-top: 12px;
 }
 
 .faq .h2 {
@@ -2712,7 +2717,7 @@ input[type='submit'] {
   }
 
   .hero.hero--form .hero__content {
-    min-height: 350px;
+    min-height: 470px;
   }
 
   .hero--form + section {
@@ -3364,7 +3369,7 @@ input[type='submit'] {
   }
 
   .page-helic-rent .hero {
-    background-image: url('../img/helic-rent-hero-m.jpg');
+    background: url('../img/helic-rent-hero-m.jpg') no-repeat center / cover;
   }
 
   .page-medic .hero {
