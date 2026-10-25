@@ -18,7 +18,7 @@
 	<link rel="stylesheet" href="css/jquery.fancybox.min.css">
 	<link rel="stylesheet" href="css/flatpickr.min.css">
 
-	<link rel="stylesheet" href="css/styles.css?v=5">
+	<link rel="stylesheet" href="css/styles.css?v=6">
 </head>
 
 <body class="page-jet-rent page-header-w">
@@ -79,7 +79,7 @@
 
 	<main>
 
-		<section class="hero page-hero color-w">
+		<section class="hero hero--form color-w">
 		    <div class="container">
 		
 		        <div class="breadcrumbs">
@@ -101,6 +101,42 @@
 		                <div class="hero__descr">Организуем срочные, международные, <br> корпоративные и семейные перелёты <br> с персональным сопровождением 24/7.</div>
 		            </div>
 		
+		            <div class="col-6 col-md-12">
+		                <div class="hero__form">
+		                    <div class="hero__form-title">БЫСТРЫЙ ЗАПРОС НА РЕЙС</div>
+		                    <form class="form">
+		                        <div class="form__grid">
+		                            <div class="form__input form__input--icon form__input--from">
+		                                <input type="text" class="w-100" name="from" placeholder="Откуда">
+		                            </div>
+		                            <div class="form__input form__input--icon form__input--place">
+		                                <input type="text" class="w-100" name="place" placeholder="Куда">
+		                            </div>
+		                            <div class="form__input form__input--icon form__input--cal">
+		                                <input type="text" class="cal w-100" name="cal" class="cal" placeholder="Дата">
+		                            </div>
+		                            <div class="form__input form__input--people">
+		                                <button type="button" class="minus">-</button>
+		                                <input type="number" name="people" value="1" min="1">
+		                                <span>Пассажир</span>
+		                                <button type="button" class="plus">+</button>
+		                            </div>
+		                            <div class="form__input form__input--name">
+		                                <input type="text" class="w-100" name="name" placeholder="Ваше имя*" required>
+		                            </div>
+		                            <div class="form__input form__input--tel">
+		                                <input type="text" class="w-100" name="tel" placeholder="Номер телефона*" required>
+		                            </div>
+		                        </div>
+		                        <div class="form__checkbox">
+		                            <input type="checkbox" name="return" id="return">
+		                            <label for="return" class="form__checkbox-text">Подобрать обратный рейс</label>
+		                        </div>
+		                        <button type="submit" class="btn w-100 hero__form-btn"><span>Получить варианты</span></button>
+		                    </form>
+		                </div>
+		            </div>
+		
 		        </div>
 		    </div>
 		</section>
@@ -110,6 +146,165 @@
 		            <div class="cta__title">Экономьте до 75% со специальными предложениями на перелёты</div>
 		            <a href="javascript:;" class="btn btn-w popup-link" data-src="#discover"><span>Посмотреть предложения</span></a>
 		        </div>
+		    </div>
+		</section>
+
+		<section class="story mb-0">
+		    <div class="container">
+		        <h2 class="h2 story__title">Весь перелёт — в руках одной команды</h2>
+		        <div class="story__subtitle">От подбора самолёта до сопровождения в аэропорту и организации дополнительных услуг.</div>
+		
+		        <div class="story__cards">
+		
+		            <div class="story__card">
+		                <div class="story__inner">
+		                    <div class="story__name">Не ограничиваемся одним предложением</div>
+		                    <div class="story__descr">Сравниваем доступные самолёты по стоимости, вместимости, дальности, году выпуска и конфигурации салона.</div>
+		                </div>
+		            </div>
+		
+		            <div class="story__card">
+		                <div class="story__inner">
+		                    <div class="story__name">Находим решения <br> для маршрутов по всему миру</div>
+		                    <div class="story__descr">Работаем с широкой партнёрской сетью и подбираем доступные воздушные суда в нужной географии.</div>
+		                </div>
+		            </div>
+		
+		            <div class="story__card">
+		                <div class="story__inner">
+		                    <div class="story__name">Берём на себя <br> организационные вопросы</div>
+		                    <div class="story__descr">Координируем маршрут, документы, внутреннее обслуживание, трансфер и дополнительные пожелания.</div>
+		                </div>
+		            </div>
+		
+		            <div class="story__card">
+		                <div class="story__inner">
+		                    <div class="story__name">Остаёмся на связи на протяжении <br> всего перелёта</div>
+		                    <div class="story__descr">Персональный авиационный консультант всегда на связи — до, во время и после полёта.</div>
+		                </div>
+		            </div>
+		
+		            <div class="story__card">
+		                <div class="story__inner">
+		                    <div class="story__name">Гарантируем полную конфиденциальность</div>
+		                    <div class="story__descr">Соблюдаем конфиденциальность маршрутов, пассажиров и деловой информации.</div>
+		                </div>
+		            </div>
+		
+		            <div class="story__card">
+		                <div class="story__inner">
+		                    <div class="story__name">Успеваем, даже когда времени <br> почти нет</div>
+		                    <div class="story__descr">Оперативно проверяем доступность воздушных судов и предлагаем возможные варианты.</div>
+		                </div>
+		            </div>
+		
+		        </div>
+		    </div>
+		</section>
+		<section class="steps">
+		    <div class="container">
+		        
+		        <div class="steps__content">
+		
+		            <div class="steps__header">
+		                <h2 class="h2 steps__title">Всегда подбираем лучшее решение</h2>
+		
+		                <div class="arrows">
+		                    <div class="arrow arrow-prev arrow--w">Prev</div>
+		                    <div class="arrow arrow-next arrow--w">Next</div>
+		                </div>
+		            </div>
+		
+		            <div class="steps__slider">
+		
+		                <div class="steps__slide">
+		                    <div class="steps__inner">
+		                        <div class="steps__text">
+		                            <div class="steps__num">Этап 1</div>
+		                            <div class="steps__h3">Вы оставляете запрос</div>
+		                            <div class="steps__descr">Сообщаете маршрут, дату, количество <br> пассажиров и дополнительные <br> пожелания.</div>
+		                            <a href="#" class="btn btn-w steps__btn"><span>Персональное предложение</span></a>
+		                        </div>
+		                        <div class="steps__img">
+		                            <img src="img/steps-1-1.jpg" alt="">
+		                        </div>
+		                    </div>
+		                </div>
+		
+		                <div class="steps__slide">
+		                    <div class="steps__inner">
+		                        <div class="steps__text">
+		                            <div class="steps__num">Этап 2</div>
+		                            <div class="steps__h3">Проверяем доступность</div>
+		                            <div class="steps__descr">Связываемся с авиакомпаниями <br> и находим борта под ваш маршрут <br> и даты.</div>
+		                            <a href="#" class="btn btn-w steps__btn"><span>Персональное предложение</span></a>
+		                        </div>
+		                        <div class="steps__img">
+		                            <img src="img/steps-2.jpg" alt="">
+		                        </div>
+		                    </div>
+		                </div>
+		
+		                <div class="steps__slide">
+		                    <div class="steps__inner">
+		                        <div class="steps__text">
+		                            <div class="steps__num">Этап 3</div>
+		                            <div class="steps__h3">Показываем <br> эксклюзивные варианты</div>
+		                            <div class="steps__descr">Предложения, которых нет в открытом <br> доступе, — благодаря партнёрской <br> сети по всему миру.</div>
+		                            <a href="#" class="btn btn-w steps__btn"><span>Персональное предложение</span></a>
+		                        </div>
+		                        <div class="steps__img">
+		                            <img src="img/steps-3.jpg" alt="">
+		                        </div>
+		                    </div>
+		                </div>
+		
+		                <div class="steps__slide">
+		                    <div class="steps__inner">
+		                        <div class="steps__text">
+		                            <div class="steps__num">Этап 4</div>
+		                            <div class="steps__h3">Согласовываем детали <br> и документы</div>
+		                            <div class="steps__descr">Фиксируем маршрут, состав <br> пассажиров и дополнительные <br> услуги.</div>
+		                            <a href="#" class="btn btn-w steps__btn"><span>Персональное предложение</span></a>
+		                        </div>
+		                        <div class="steps__img">
+		                            <img src="img/steps-4.jpg" alt="">
+		                        </div>
+		                    </div>
+		                </div>
+		
+		                <div class="steps__slide">
+		                    <div class="steps__inner">
+		                        <div class="steps__text">
+		                            <div class="steps__num">Этап 5</div>
+		                            <div class="steps__h3">Организуем вылет</div>
+		                            <div class="steps__descr">Координируем аэропортовое <br> обслуживание, трансфер, питание <br> и другие пожелания.</div>
+		                            <a href="#" class="btn btn-w steps__btn"><span>Персональное предложение</span></a>
+		                        </div>
+		                        <div class="steps__img">
+		                            <img src="img/steps-5-1-1.jpg" alt="">
+		                        </div>
+		                    </div>
+		                </div>
+		
+		               <div class="steps__slide">
+		                    <div class="steps__inner">
+		                        <div class="steps__text">
+		                            <div class="steps__num">Этап 6</div>
+		                            <div class="steps__h3">Сопровождаем <br> до завершения перелёта</div>
+		                            <div class="steps__descr">Персональный консультант остаётся <br> на связи и контролирует выполнение <br> рейса.</div>
+		                            <a href="#" class="btn btn-w steps__btn"><span>Персональное предложение</span></a>
+		                        </div>
+		                        <div class="steps__img">
+		                            <img src="img/steps-6.jpg" alt="">
+		                        </div>
+		                    </div>
+		                </div>
+		
+		            </div>
+		
+		        </div>
+		
 		    </div>
 		</section>
 
@@ -151,6 +346,45 @@
 		            </div>
 		        </div>
 		
+		    </div>
+		</section>
+		<section class="conver conver--min">
+		    <div class="container">
+		        <div class="conver__content">
+		            <h2 class="h2 conver__title">Подберём оптимальное <br> решение под ваш запрос</h2>
+		            <div class="conver__descr">
+		                Оставьте заявку — мы предложим подходящие варианты <br> воздушных судов, рассчитаем стоимость и организуем <br> перелёт в кратчайшие сроки.
+		            </div>
+		            <form class="conver__form">
+		                <div class="form__grid">
+		                    <div class="form__input form__input--name">
+		                        <input type="text" class="w-100" name="name" placeholder="Имя*" required>
+		                    </div>
+		                    <div class="form__input form__input--tel">
+		                        <input type="tel" class="w-100" name="tel" placeholder="Телефон*" required>
+		                    </div>
+		                    <div class="form__input form__input--mail">
+		                        <input type="email" class="w-100" name="mail" placeholder="Email">
+		                    </div>
+		                    <div class="form__input form__input--icon form__input--from">
+		                        <input type="text" class="w-100" name="from" placeholder="Откуда">
+		                    </div>
+		                    <div class="form__input form__input--icon form__input--place">
+		                        <input type="text" class="w-100" name="place" placeholder="Куда">
+		                    </div>
+		                    <div class="form__input form__input--textarea">
+		                        <textarea name="text" class="w-100" placeholder="Комментарий"></textarea>
+		                    </div>
+		                    <div class="form__input--wrapper">
+		                        <div class="form__checkbox">
+		                            <input type="checkbox" name="return" id="return">
+		                            <label for="return" class="form__checkbox-text">Согласен с условиями <a href="#" target="_blank">оферты</a> и <a href="#" target="_blank">политики конфиденциальности</a></label>
+		                        </div>
+		                        <button type="submit" class="btn w-100"><span>Отправить заявку</span></button>
+		                    </div>
+		                </div>
+		            </form>
+		        </div>
 		    </div>
 		</section>
 		
@@ -257,7 +491,7 @@
 	<script src="js/jquery.fancybox.min.js"></script>
 	<script src="js/flatpickr.min.js"></script>
 	<script src="js/slick.min.js"></script>
-	<script src="js/scripts.js?v=5"></script>
+	<script src="js/scripts.js?v=6"></script>
 	<!-- end scripts -->
 
 </body>
