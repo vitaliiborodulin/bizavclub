@@ -1,4 +1,4 @@
-<section class="hero page-hero color-w">
+<section class="hero hero--form color-w">
     <div class="container">
 
         <div class="breadcrumbs">
@@ -9,15 +9,51 @@
             </div>
             <div class="separator">/</div>
             <div class="breadcrumbs__item">
-                Аренда частного самолета
+                Аренда частного самолёта
             </div>
         </div>
 
         <div class="hero__content row">
 
             <div class="col-6 col-md-12">
-                <h1 class="h1">Частный самолет <br> под ваш маршрут</h1>
+                <h1 class="h1">Частный самолёт <br> под ваш маршрут</h1>
                 <div class="hero__descr">Организуем срочные, международные, <br> корпоративные и семейные перелёты <br> с персональным сопровождением 24/7.</div>
+            </div>
+
+            <div class="col-6 col-md-12">
+                <div class="hero__form">
+                    <div class="hero__form-title">БЫСТРЫЙ ЗАПРОС НА РЕЙС</div>
+                    <form class="form">
+                        <div class="form__grid">
+                            <div class="form__input form__input--icon form__input--from">
+                                <input type="text" class="w-100" name="from" placeholder="Откуда">
+                            </div>
+                            <div class="form__input form__input--icon form__input--place">
+                                <input type="text" class="w-100" name="place" placeholder="Куда">
+                            </div>
+                            <div class="form__input form__input--icon form__input--cal">
+                                <input type="text" class="cal w-100" name="cal" class="cal" placeholder="Дата">
+                            </div>
+                            <div class="form__input form__input--people">
+                                <button type="button" class="minus">-</button>
+                                <input type="number" name="people" value="1" min="1">
+                                <span>Пассажир</span>
+                                <button type="button" class="plus">+</button>
+                            </div>
+                            <div class="form__input form__input--name">
+                                <input type="text" class="w-100" name="name" placeholder="Ваше имя*" required>
+                            </div>
+                            <div class="form__input form__input--tel">
+                                <input type="text" class="w-100" name="tel" placeholder="Номер телефона*" required>
+                            </div>
+                        </div>
+                        <div class="form__checkbox">
+                            <input type="checkbox" name="return" id="return">
+                            <label for="return" class="form__checkbox-text">Подобрать обратный рейс</label>
+                        </div>
+                        <button type="submit" class="btn w-100 hero__form-btn"><span>Получить варианты</span></button>
+                    </form>
+                </div>
             </div>
 
         </div>

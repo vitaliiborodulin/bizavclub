@@ -1,6 +1,6 @@
 .btn {
     padding: 20px;
-
+    
     max-width: 100%;
     // width: 260px;
 
@@ -12,6 +12,7 @@
 
     color: @light;
     background-color: @beige;
+    border: 1px solid transparent;
 
     position: relative;
     display: inline-block;
@@ -54,11 +55,29 @@
 .btn-w {
     background-color: @light;
     color: @text;
+    border-color: @light;
 
     &:hover,
     &:active,
     &:focus {
         background-color: @light2;
+    }
+
+    span::after {
+        background: url(../img/arrow-left.svg) no-repeat center;
+    }
+}
+
+.btn-o {
+    background-color: transparent;
+    color: @light;
+    border-color: @light;
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: @light2;
+        color: @text;
     }
 
     span::after {

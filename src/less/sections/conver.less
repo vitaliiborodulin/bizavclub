@@ -6,12 +6,11 @@
 
     .md-block({
         padding: 32px 0;
-        min-height: 600px;
     });
 
     &__content {
-        max-width: 50%;
-        .md(max-width, 100%);
+        max-width: 55%;
+        .lg(max-width, 100%);
     }
 
     &__descr {
@@ -26,6 +25,25 @@
         p + p {
             margin-top: 20px;
             .md(margin-top, 12px);
+        }
+    }
+
+    &__btns {
+        margin-top: 60px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+
+        .md-block({
+            margin-top: 32px;
+            gap: 8px;
+        });
+
+        .btn {
+            .md-block({
+                font-size: 12px;
+                padding: 18px 8px;
+            });
         }
     }
 
@@ -78,6 +96,103 @@
             font-size: 13px;
         })
     }
+
+    &__form {
+        margin-top: 48px;
+        .md(margin-top, 32px);
+        
+        .form__grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-areas:
+                "na na te te ma ma"
+                "ta ta ta wra wra wra";
+            gap: 12px;
+
+            .md-block({
+                display: block;
+
+                > * {
+                    margin-bottom: 8px;
+                }
+            });
+        }
+
+        .form__input--textarea {
+            grid-area: ta;
+        }
+
+        .form__input--wrapper {
+            grid-area: wra;
+            display: flex;
+            flex-direction: column;
+
+            .form__checkbox {
+                margin-top: 10px;
+                margin-bottom: auto;
+
+                .md-block({
+                    margin-top: 8px;
+                });
+            }
+
+            .btn {
+                margin-top: 10px;
+                .md(margin-top, 14px);
+            }
+        }
+        .form__input--name {
+            grid-area: na;
+        }
+        .form__input--mail {
+            grid-area: ma;
+        }
+        .form__input--tel {
+            grid-area: te;
+        }
+        .form__input--from {
+            grid-area: fro;
+        }
+        .form__input--place {
+            grid-area: pla;
+        }
+    }
+}
+
+.conver.conver--min {
+    padding: 0;
+    background: none!important;
+
+    .conver__content {
+        padding: 60px 40px;
+        border-radius: 10px;
+        max-width: 100%;
+        background: @beige url(../img/jet-conver.jpg) no-repeat center/cover;
+
+        .md-block({
+            padding: 184px 16px 32px;
+        });
+
+        .xs-block({
+            background: @beige url(../img/jet-conver-m.jpg) no-repeat center top/cover;
+        });
+
+        > * {
+            max-width: 50%;
+            .lg(max-width, 100%);
+        }
+    }
+
+    .conver__form {
+        margin-top: 40px;
+    }
+
+    .form__grid {
+        grid-template-areas:
+            "na na te te ma ma"
+            "fro fro fro pla pla pla"
+            "ta ta ta wra wra wra";
+    }
 }
 
 .page-concierge .conver,
@@ -90,10 +205,16 @@
     });
 }
 
+.page-concierge .conver,
+.page-cargo .conver {
+    .md(min-height, 600px);
+}
+
 .page-sell .conver {
     background: @beige url(../img/sell-conver.jpg) no-repeat center/cover;
 
     .md-block({
+        min-height: 600px;
         background: @beige url(../img/concierge-conver-m.jpg) no-repeat center/cover;
     });
 }
@@ -102,6 +223,7 @@
     background: @beige url(../img/helic-conver.jpg) no-repeat center/cover;
 
     .md-block({
+        min-height: 600px;
         background: @beige url(../img/helic-conver-m.jpg) no-repeat center/cover;
     });
 }
@@ -112,4 +234,13 @@
     // .md-block({
     //     background: @beige url(../img/concierge-conver-m.jpg) no-repeat center/cover;
     // });
+}
+
+.page-about .conver,
+.page-home .conver {
+    background: @beige url(../img/story-cover.jpg) no-repeat center/cover;
+
+    .xs-block({
+        background: @beige url(../img/story-cover-m.jpg) no-repeat center/cover;
+    });
 }

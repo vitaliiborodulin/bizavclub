@@ -6,6 +6,10 @@
         padding: 50px 0;
     });
 
+    .xs-block({
+        background: @beige url(../img/story-cover-m.jpg) no-repeat center/cover;
+    });
+
     &__title {
         color: @light;
     }
@@ -16,7 +20,12 @@
         font-size: 20px;
         line-height: 130%;
         letter-spacing: 0em;
-        color: fade(@light, 80%)
+        color: fade(@light, 80%);
+
+        .md-block({
+            margin-top: 16px;
+            font-size: 16px;
+        });
     }
 
     &__cards {
