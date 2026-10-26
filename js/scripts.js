@@ -275,6 +275,28 @@ $(function() {
           },
       ]
   });
+  
+  // popular
+  
+  $('.popular__slider-nav').slick({
+      vertical: true,
+      verticalSwiping: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      centerMode: true,
+      // infinite: false,
+      nextArrow: $('.popular .arrow-next'),
+      prevArrow: $('.popular .arrow-prev'),
+      asNavFor: '.popular__slider',
+  });
+  
+  $('.popular__slider').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      fade: true,
+      asNavFor: '.popular__slider-nav',
+  });
   $('.popup-link').fancybox({
       // thumbs : { autoStart:true },
       toolbar: "auto",
