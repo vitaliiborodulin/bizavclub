@@ -195,12 +195,15 @@
     }
 }
 
+
+
+.page-jet-rent .conver,
 .page-concierge .conver,
 .page-cargo .conver,
 .page-group .conver {
     background: @beige url(../img/concierge-conver.jpg) no-repeat center/cover;
 
-    .md-block({
+    .xs-block({
         background: @beige url(../img/concierge-conver-m.jpg) no-repeat center/cover;
     });
 }
@@ -243,4 +246,25 @@
     .xs-block({
         background: @beige url(../img/story-cover-m.jpg) no-repeat center/cover;
     });
+}
+
+.conver.conver--single {
+    padding: 60px 0;
+    background: @beige url(../img/concierge-hero-section-1.jpg) no-repeat center/cover;
+
+    .xs-block({
+        padding: 20px 16px;
+        background: @beige url(../img/concierge-hero-section-1-m.jpg) no-repeat center bottom/cover;
+    });
+
+    .conver__content {
+        position: relative;
+        height: 480px;
+        .md(height, 460px);
+    }
+    .conver__title {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
 }

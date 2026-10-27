@@ -6,6 +6,8 @@
         height: 100%;
         flex-direction: column;
         align-items: flex-start;
+
+       .md(align-items, center);
     }
 
     &__descr {
@@ -24,33 +26,79 @@
     .arrows {
         position: absolute;
         top: 50%;
-        right: 0;
+        left: 150px;
         transform: rotate(90deg) translateY(-50%);
+        .md(display, none);
     }
 
-    &__slider-nav {
+    &__nav {
+        width: 200px;
+        height: 250px; 
         margin-top: auto;
         margin-bottom: auto;
-        max-width: 427px;
+        overflow: hidden;
+
+        .md-block({
+            width: 100%;
+            // height: 150px;
+        });
     }
 
-    &__slide-nav span {
-        display: block;
-        padding: 14px 16px;
-        border-bottom: 1px solid fade(@beige, 10%);
-        transition: all 0.3s ease;
+    &__nav .slick-list {
+        padding-top: 50px !important; /* Смещаем визуальное поле вниз на 1 слайд */
+        box-sizing: border-box;
+
+        // .md-block({
+        //     padding-top: 30px !important;
+        // });
     }
 
-    &__slide-nav.slick-current span {
-        // color: @text;
-        // font-size: 26px;
+    &__nav .slick-slide {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        font-size: 16px;
+        font-weight: 500;
+        color: @text1;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        opacity: 0.3;
+        transform: scale(0.8);
+
+        /* БЛОКИРУЕМ КЛИК: Крайние элементы больше не будут реагировать на нажатия */
+        pointer-events: none;
+        border-bottom: 1px solid fade(@beige, 20%);
+
+        // .md-block({
+        //     height: 30px;
+        //     font-size: 11px;
+        // });
+    }
+
+    /* Соседи центрального слайда */
+    &__nav .slick-slide:has(+ .slick-center),
+    &__nav .slick-center + .slick-slide {
+        opacity: 0.65;
+        transform: scale(1);
+
+        /* РАЗРЕШАЕМ КЛИК: На этих соседей всё еще можно нажать для плавной прокрутки */
+        pointer-events: auto; 
+    }
+
+    /* Центральный активный город */
+    &__nav .slick-slide.slick-center {
+        opacity: 1 !important;
+        transform: scale(1.25) !important;
         font-weight: 600;
+        color: @text;
+        pointer-events: auto; 
     }
 
     &__btn {
         .md-block({
-            margin-left: auto;
-            margin-right: auto;
             margin-top: 24px;
         });
     }

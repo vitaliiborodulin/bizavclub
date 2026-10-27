@@ -1,15 +1,9 @@
-const servicesSlider = $('.services__slider');
+// steps slider
 
-servicesSlider.slick({
+$('.services__slider').slick({
     slidesToShow: 4,
     slidesToScroll: 1,
     infinite: true,
-    // swipe: false,
-    // touchMove: false,
-    // draggable: false,
-    // swipeToSlide: false,
-    // fade: true,
-    // cssEase: 'linear',
     nextArrow: $('.services .arrow-next'),
     prevArrow: $('.services .arrow-prev'),
     responsive: [
@@ -28,40 +22,31 @@ servicesSlider.slick({
         {
             breakpoint: 576,
             settings: {
-            slidesToShow: 1,
-            centerMode: true,
-            // centerPadding: '60px',
+                slidesToShow: 1,
+                centerMode: true,
             }
         },
     ]
 });
 
-const stepsSlider = $('.steps__slider');
+// steps slider
 
-stepsSlider.slick({
+$('.steps__slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     infinite: false,
     adaptiveHeight: true,
-    // swipe: false,
-    // touchMove: false,
-    // draggable: false,
-    // swipeToSlide: false,
     fade: true,
     cssEase: 'linear',
     nextArrow: $('.steps .arrow-next'),
     prevArrow: $('.steps .arrow-prev'),
 });
 
-const shipSlider = $('.ship__slider');
+// ship slider
 
-shipSlider.slick({
+$('.ship__slider').slick({
     slidesToShow: 3,
     slidesToScroll: 1,
-    // swipe: false,
-    // touchMove: false,
-    // draggable: false,
-    // swipeToSlide: false,
     nextArrow: $('.ship .arrow-next'),
     prevArrow: $('.ship .arrow-prev'),
      responsive: [
@@ -80,17 +65,34 @@ shipSlider.slick({
     ]
 });
 
+// planes slider
+
+$('.planes__slider').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    nextArrow: $('.planes .arrow-next'),
+    prevArrow: $('.planes .arrow-prev'),
+    // responsive: [
+    //     {
+    //         breakpoint: 1010,
+    //         settings: {
+    //             slidesToShow: 2,
+    //         }
+    //     },
+    //     {
+    //         breakpoint: 576,
+    //         settings: {
+    //             slidesToShow: 1,
+    //         }
+    //     },
+    // ]
+});
+
 // staff
 
-const staffSlider = $('.staff__slider');
-
-staffSlider.slick({
+$('.staff__slider').slick({
     slidesToShow: 4,
     slidesToScroll: 1,
-    // swipe: false,
-    // touchMove: false,
-    // draggable: false,
-    // swipeToSlide: false,
     nextArrow: $('.staff .arrow-next'),
     prevArrow: $('.staff .arrow-prev'),
      responsive: [
@@ -111,7 +113,6 @@ staffSlider.slick({
             settings: {
                 slidesToShow: 1,
                 centerMode: true,
-                // centerPadding: '60px',
             }
         },
     ]
@@ -119,16 +120,30 @@ staffSlider.slick({
 
 // popular
 
-$('.popular__slider-nav').slick({
+
+
+$('.popular__nav').slick({
     vertical: true,
     verticalSwiping: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
+    slidesToShow: 5,
+    // slidesToScroll: 1,
     centerMode: true,
-    // infinite: false,
+    // ХАК: Отрицательный паддинг сдвигает трек ровно на 1 слайд (70px) вниз,
+    // возвращая истинный центр на 3-ю строчку вместо 2-й.
+    centerPadding: '50px',
     nextArrow: $('.popular .arrow-next'),
     prevArrow: $('.popular .arrow-prev'),
+    infinite: true,
+    speed: 300,
     asNavFor: '.popular__slider',
+    // responsive: [
+    //      {
+    //         breakpoint: 768,
+    //         settings: {
+    //            centerPadding: '30px',
+    //         }
+    //     },
+    // ]
 });
 
 $('.popular__slider').slick({
@@ -136,5 +151,5 @@ $('.popular__slider').slick({
     slidesToScroll: 1,
     arrows: false,
     fade: true,
-    asNavFor: '.popular__slider-nav',
+    asNavFor: '.popular__nav',
 });
