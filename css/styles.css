@@ -320,6 +320,10 @@ body {
   width: 100%;
 }
 
+.h-100 {
+  height: 100%;
+}
+
 .tac {
   text-align: center;
 }
@@ -1536,6 +1540,7 @@ input[type='submit'] {
   grid-template-areas: "na na te te ma ma" "fro fro fro pla pla pla" "ta ta ta wra wra wra";
 }
 
+.page-jet-rent .conver,
 .page-concierge .conver,
 .page-cargo .conver,
 .page-group .conver {
@@ -1557,6 +1562,22 @@ input[type='submit'] {
 .page-about .conver,
 .page-home .conver {
   background: #B8A282 url(../img/story-cover.jpg) no-repeat center / cover;
+}
+
+.conver.conver--single {
+  padding: 60px 0;
+  background: #B8A282 url(../img/concierge-hero-section-1.jpg) no-repeat center / cover;
+}
+
+.conver.conver--single .conver__content {
+  position: relative;
+  height: 480px;
+}
+
+.conver.conver--single .conver__title {
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 .process {
@@ -2047,6 +2068,11 @@ input[type='submit'] {
   color: rgba(79, 85, 95, 0.8);
 }
 
+.popular {
+  /* Соседи центрального слайда */
+  /* Центральный активный город */
+}
+
 .popular__text {
   position: relative;
   display: flex;
@@ -2065,26 +2091,63 @@ input[type='submit'] {
 .popular .arrows {
   position: absolute;
   top: 50%;
-  right: 0;
+  left: 150px;
   -webkit-transform: rotate(90deg) translateY(-50%);
           transform: rotate(90deg) translateY(-50%);
 }
 
-.popular__slider-nav {
+.popular__nav {
+  width: 200px;
+  height: 250px;
   margin-top: auto;
   margin-bottom: auto;
-  max-width: 427px;
+  overflow: hidden;
 }
 
-.popular__slide-nav span {
-  display: block;
-  padding: 14px 16px;
-  border-bottom: 1px solid rgba(184, 162, 130, 0.1);
-  transition: all 0.3s ease;
+.popular__nav .slick-list {
+  padding-top: 50px !important;
+  /* Смещаем визуальное поле вниз на 1 слайд */
+  box-sizing: border-box;
 }
 
-.popular__slide-nav.slick-current span {
+.popular__nav .slick-slide {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #4F555F;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  opacity: 0.3;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  /* БЛОКИРУЕМ КЛИК: Крайние элементы больше не будут реагировать на нажатия */
+  pointer-events: none;
+  border-bottom: 1px solid rgba(184, 162, 130, 0.2);
+}
+
+.popular__nav .slick-slide:has(+ .slick-center),
+.popular__nav .slick-center + .slick-slide {
+  opacity: 0.65;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  /* РАЗРЕШАЕМ КЛИК: На этих соседей всё еще можно нажать для плавной прокрутки */
+  pointer-events: auto;
+}
+
+.popular__nav .slick-slide.slick-center {
+  opacity: 1 !important;
+  -webkit-transform: scale(1.25) !important;
+          transform: scale(1.25) !important;
   font-weight: 600;
+  color: #31363E;
+  pointer-events: auto;
 }
 
 .popular__imgs {
@@ -2119,6 +2182,73 @@ input[type='submit'] {
 
 .popular__img:nth-child(3) {
   grid-area: i3;
+}
+
+.time__wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.time__descr {
+  margin-top: 20px;
+  margin-bottom: 32px;
+  font-size: 20px;
+  line-height: 130%;
+  letter-spacing: 0em;
+  color: #4F555F;
+}
+
+.time__cards {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.time__card {
+  padding: 20px;
+  background-color: #F7F1EA;
+  border-radius: 10px;
+  width: 100%;
+  min-height: 135px;
+}
+
+.time__h3 {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.time__number {
+  font-family: 'Evolventa', sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+}
+
+.time__text {
+  margin-top: auto;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: 0em;
+}
+
+.time__img {
+  width: 100%;
+  height: 385px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.time__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: inherit;
 }
 
 .ship {
@@ -2191,6 +2321,7 @@ input[type='submit'] {
   color: #4F555F;
   background-color: #FFFAF5;
   border-radius: 10px;
+  border: 1px solid #F7F1EA;
   background-repeat: no-repeat;
   background-size: auto;
   background-position: 8px center;
@@ -2202,6 +2333,22 @@ input[type='submit'] {
 
 .ship__badge--distance {
   background-image: url(../img/lightning.svg);
+}
+
+.planes__header {
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.planes__subtitle {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: 0;
+  color: #4F555F;
 }
 
 .staff__header {
@@ -2911,6 +3058,14 @@ input[type='submit'] {
 }
 
 @media screen and (max-width: 1010px) {
+  .d-lg-none {
+    display: none;
+  }
+
+  .d-lg-block {
+    display: block;
+  }
+
   .col-lg-12 {
     width: calc(100% - 20px);
   }
@@ -2954,6 +3109,10 @@ input[type='submit'] {
 
   .exp__cards {
     margin-top: 12px;
+  }
+
+  .time__cards {
+    margin-top: 8px;
   }
 
   .story__card {
@@ -3246,12 +3405,6 @@ input[type='submit'] {
   }
 
   .page-concierge .conver,
-  .page-cargo .conver,
-  .page-group .conver {
-    background: #B8A282 url(../img/concierge-conver-m.jpg) no-repeat center / cover;
-  }
-
-  .page-concierge .conver,
   .page-cargo .conver {
     min-height: 600px;
   }
@@ -3264,6 +3417,10 @@ input[type='submit'] {
   .page-helic-rent .conver {
     min-height: 600px;
     background: #B8A282 url(../img/helic-conver-m.jpg) no-repeat center / cover;
+  }
+
+  .conver.conver--single .conver__content {
+    height: 460px;
   }
 
   .process {
@@ -3484,15 +3641,25 @@ input[type='submit'] {
     font-size: 13px;
   }
 
+  .popular__text {
+    align-items: center;
+  }
+
   .popular__descr {
     margin-top: 16px;
     margin-bottom: 24px;
     font-size: 16px;
   }
 
+  .popular .arrows {
+    display: none;
+  }
+
+  .popular__nav {
+    width: 100%;
+  }
+
   .popular__btn {
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 24px;
   }
 
@@ -3500,6 +3667,47 @@ input[type='submit'] {
     margin-top: 32px;
     height: 285px;
     gap: 9px;
+  }
+
+  .time__wrap {
+    display: block;
+  }
+
+  .time__descr {
+    margin-top: 16px;
+    font-size: 16px;
+  }
+
+  .time__cards {
+    display: block;
+  }
+
+  .time__card {
+    padding: 20px 16px;
+    min-height: 71px;
+  }
+
+  .time__card + .time__card {
+    margin-top: 8px;
+  }
+
+  .time__h3 {
+    flex-direction: row;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .time__number {
+    width: 60px;
+    font-size: 26px;
+  }
+
+  .time__text {
+    margin-top: 0px;
+  }
+
+  .time__img {
+    height: 214px;
   }
 
   .ship {
@@ -3538,6 +3746,20 @@ input[type='submit'] {
 
   .ship__badge {
     font-size: 13px;
+  }
+
+  .planes__header {
+    margin-bottom: 32px;
+    display: block;
+  }
+
+  .planes .arrows {
+    margin-top: 16px;
+  }
+
+  .planes__subtitle {
+    margin-top: 16px;
+    font-size: 16px;
   }
 
   .staff__h3 {
@@ -3907,9 +4129,21 @@ input[type='submit'] {
     background: #B8A282 url(../img/jet-conver-m.jpg) no-repeat center top / cover;
   }
 
+  .page-jet-rent .conver,
+  .page-concierge .conver,
+  .page-cargo .conver,
+  .page-group .conver {
+    background: #B8A282 url(../img/concierge-conver-m.jpg) no-repeat center / cover;
+  }
+
   .page-about .conver,
   .page-home .conver {
     background: #B8A282 url(../img/story-cover-m.jpg) no-repeat center / cover;
+  }
+
+  .conver.conver--single {
+    padding: 20px 16px;
+    background: #B8A282 url(../img/concierge-hero-section-1-m.jpg) no-repeat center bottom / cover;
   }
 
   .services__content {
