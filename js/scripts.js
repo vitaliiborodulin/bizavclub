@@ -231,20 +231,20 @@ $(function() {
       slidesToScroll: 1,
       nextArrow: $('.planes .arrow-next'),
       prevArrow: $('.planes .arrow-prev'),
-      // responsive: [
-      //     {
-      //         breakpoint: 1010,
-      //         settings: {
-      //             slidesToShow: 2,
-      //         }
-      //     },
-      //     {
-      //         breakpoint: 576,
-      //         settings: {
-      //             slidesToShow: 1,
-      //         }
-      //     },
-      // ]
+      responsive: [
+          {
+              breakpoint: 1010,
+              settings: {
+                  slidesToShow: 2,
+              }
+          },
+          {
+              breakpoint: 576,
+              settings: {
+                  slidesToShow: 1,
+              }
+          },
+      ]
   });
   
   // staff
@@ -279,15 +279,13 @@ $(function() {
   
   // popular
   
-  
-  
   $('.popular__nav').slick({
       vertical: true,
       verticalSwiping: true,
       slidesToShow: 5,
       // slidesToScroll: 1,
       centerMode: true,
-      // ХАК: Отрицательный паддинг сдвигает трек ровно на 1 слайд (70px) вниз,
+      // ХАК: паддинг сдвигает трек ровно на 1 слайд (50px) вниз,
       // возвращая истинный центр на 3-ю строчку вместо 2-й.
       centerPadding: '50px',
       nextArrow: $('.popular .arrow-next'),
@@ -295,14 +293,6 @@ $(function() {
       infinite: true,
       speed: 300,
       asNavFor: '.popular__slider',
-      // responsive: [
-      //      {
-      //         breakpoint: 768,
-      //         settings: {
-      //            centerPadding: '30px',
-      //         }
-      //     },
-      // ]
   });
   
   $('.popular__slider').slick({
