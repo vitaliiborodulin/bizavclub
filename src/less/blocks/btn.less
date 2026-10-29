@@ -85,6 +85,24 @@
     }
 }
 
+.btn-o-b {
+    background-color: transparent;
+    color: @text1;
+    border-color: @text1;
+
+    &:hover,
+    &:active,
+    &:focus {
+        border-color: transparent;
+        background-color: @beige;
+        color: @light;
+    }
+
+    span::after {
+        background: url(../img/arrow-left.svg) no-repeat center;
+    }
+}
+
 .soc__btns {
     display: flex;
     align-items: center;

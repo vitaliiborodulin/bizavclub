@@ -41,6 +41,19 @@
         .md(margin-top, 32px);
     }
 
+    &__btns {
+        margin-top: 48px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        
+        .md-block({
+            margin-top: 32px;
+            gap: 8px;
+        });
+
+    }
+
     &__list {
         // margin-top: 32px;
         
@@ -84,5 +97,35 @@
         letter-spacing: 0em;
         color: @text1;
         .md(margin-top, 8px);
+    }
+}
+
+.tell.tell--home {
+
+    .xs-block({
+        padding-top: 50px;
+        padding-bottom: 50px;
+        background: @beige url(../img/tell-home-m.jpg) no-repeat top right/cover;
+    });
+    
+    .tell__info {
+        padding: 60px 40px;
+        min-height: 600px;
+
+        color: @text;
+        background: @beige url(../img/tell-home.jpg) no-repeat center/cover;
+
+        .md-block({
+            padding: 0;
+            min-height: 365px;
+        });
+
+        .xs-block({
+            background: none;
+        })
+    }
+
+    .tell__descr {
+        color: @text1;
     }
 }
