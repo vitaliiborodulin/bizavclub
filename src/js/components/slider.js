@@ -42,6 +42,40 @@ $('.steps__slider').slick({
     prevArrow: $('.steps .arrow-prev'),
 });
 
+// rental slider
+
+const rentalSlider = $('.rental__slider');
+
+function initRentalSlider() {
+    if ($(window).width() <= 768) {
+        if (!rentalSlider.hasClass('slick-initialized')) {
+            rentalSlider.slick({
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                // adaptiveHeight: true,
+                // variableWidth: true,
+                // centerMode: true,
+                arrows: false,
+                responsive: [
+                    {
+                        breakpoint: 576,
+                        settings: {
+                            slidesToShow: 1,
+                            centerMode: true,
+                        }
+                    },
+                ]
+            });
+        }
+    } else {
+        if (rentalSlider.hasClass('slick-initialized')) {
+            rentalSlider.slick('unslick');
+        }
+    }
+}
+
+initRentalSlider();
+
 // ship slider
 
 $('.ship__slider').slick({

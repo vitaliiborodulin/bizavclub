@@ -19,13 +19,13 @@ $(document).keyup(function(e) {
     }
 });
 
-// if ($(window).width() <= 768) {
+if ($(window).width() <= 768) {
 
-//     $('body').on('click', '.header__menu a[href*="#"]', function(e) {
-//         burger.toggleClass('burger-close');
-//         menu.toggleClass('open');
-//         $('html, body').removeClass('overflow');
-//         syncScrolledHeader();
-//     });
+    $('body').on('click', '.navigation__menu a', function(e) {
+        burger.toggleClass('close');
+        menu.toggleClass('open');
+        $('html, body').removeClass('overflow');
+        // syncScrolledHeader();
+    });
 
-// }
+}

@@ -125,9 +125,39 @@
     border-radius: 10px;
 }
 
+.btn-soc.btn-soc--tel {
+    padding: 10px 12px;
+}
+
 .footer .btn-soc {
     margin-top: 32px;
     background-color: @light;
 
     .lg(margin-top, 16px);
+}
+
+.btn-up {
+    position: fixed;
+    right: 30px;
+    bottom: 50px;
+    width: 60px;
+    height: 60px;
+    padding: 12px;
+    background: @beige url(../img/arrow-up.svg) no-repeat center;
+    border-radius: 50%;
+    z-index: 10;
+    font-size: 0;
+    color: transparent;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .md-block({
+        width: 44px;
+        height: 44px;
+        padding: 5px;
+        bottom: 10px;
+        right: 10px;
+    });
 }

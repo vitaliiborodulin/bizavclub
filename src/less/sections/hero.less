@@ -38,6 +38,8 @@
         .md(margin-top, 24px);
     }
 
+    
+
     &__form {
         padding: 32px;
 
@@ -162,15 +164,64 @@
 }
 
 .page-home .hero {
-    background-image: url('../img/home-hero.jpg');
+    min-height: auto;
+    // background: url('../img/home-hero-pic.png') no-repeat bottom right,
+    // url('../img/home-hero-text.svg') no-repeat center 50px/70%,
+    background: @blue_l url('../img/home-hero-1.jpg') no-repeat bottom center/cover;
 
     .md-block({
-        min-height: 520px;
-        background-image: url('../img/home-hero-m.jpg');
+        //   url('../img/home-hero-text-m.svg') no-repeat center 100px,
+        // url('../img/home-hero-pic-m.png') no-repeat bottom left/contain,
+        background: @blue_l url('../img/home-hero-1-m.jpg') no-repeat bottom center/cover;
     });
 
     .hero__content {
-        padding-top: 0;
+        min-height: 690px;
+        .lg(min-height, 550px);
+        .md(min-height, 420px);
+    }
+
+    .home-hero-text {
+        position: absolute;
+        top: 46px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+
+        .lg-block({
+            top: 0;
+        });
+    }
+
+    .home-hero-pic {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+        .md-block({
+            left: -24px;
+            right: unset;
+        });
+    }
+
+    .home-hero-btn {
+        position: absolute;
+        width: 100%;
+        max-width: 260px;
+        left: 100px;
+        top: 250px;
+        // padding: 20px 55px;
+        // font-size: 14px;
+
+        .lg-block({
+            top: 215px;
+            left: 50%;
+            transform: translateX(-50%);
+        });
+
+        .md-block({
+            top: 155px;
+        });
     }
     
 }

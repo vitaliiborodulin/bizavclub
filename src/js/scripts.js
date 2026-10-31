@@ -12,6 +12,7 @@ $(function() {
   //= components/tab
   //= components/slider
   //= components/popup
+  //= components/upBtn
 
 });
 

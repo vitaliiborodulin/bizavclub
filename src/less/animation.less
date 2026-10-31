@@ -9,3 +9,10 @@
   
     100% { transform: translateY(0); }
 }
+
+@keyframes move-cards {
+  to {
+    /* Сдвигаем на всю длину контейнера карточек минус ширина правой колонки */
+    transform: translateX(calc(-100% + 50vw));
+  }
+}

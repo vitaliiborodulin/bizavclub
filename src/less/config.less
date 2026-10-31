@@ -116,6 +116,10 @@ body {
     overflow: hidden;
 }
 
+[id] {
+  scroll-margin-top: 70px;
+}
+
 .visually-hidden {
     position: absolute;
     clip: rect(0 0 0 0);
@@ -159,6 +163,9 @@ body {
 .d-flex {
     display: flex;
 }
+.order-md-1 {
+    .md(order, -1);
+}
 
 .color-w {
     color: @light;
@@ -167,6 +174,10 @@ body {
 .bg-beige {
     background-color: @beige;
     color: @light;
+}
+
+.bg-blue-l {
+    background-color: @blue_l;
 }
 
 .bg-blue-d {
@@ -252,6 +263,15 @@ section {
 
     .md-block({
         margin: 50px 0;
+    });
+}
+
+section.section--ribbon {
+    position: relative;
+    margin-bottom: 160px;
+
+    .md-block({
+        margin-bottom: 90px;
     });
 }
 

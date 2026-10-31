@@ -21,6 +21,10 @@
         });
     }
 
+    &__btn {
+        margin-top: auto;
+    }
+
     &__cards {
         margin-top: auto;
         display: flex;
@@ -31,6 +35,7 @@
     }
 
     &__card {
+        position: relative;
         padding: 20px;
         background-color: @light2;
         border-radius: 10px;
@@ -43,6 +48,14 @@
         });
     }
 
+    &__card.time__card--active {
+        background-color: @blue_l;
+
+        .time__pic {
+            filter: none;
+        }
+    }
+
     &__card + &__card {
         .md(margin-top, 8px);
     }
@@ -51,11 +64,15 @@
         display: flex;
         flex-direction: column;
         height: 100%;
+
+        font-size: 20px;
+        font-weight: 500;
         
         .md-block({
             flex-direction: row;
             align-items: center;
             gap: 18px;
+            font-size: 18px;
         });
     }
 
@@ -94,5 +111,46 @@
             object-fit: cover;
             border-radius: inherit;
         }
+    }
+
+    &__pic {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        filter: brightness(0) saturate(100%) invert(66%) sepia(41%) saturate(228%) hue-rotate(356deg) brightness(93%) contrast(87%);
+    }
+}
+
+.time.time--alt {
+    .time__wrap {
+        align-items: flex-start;
+    }
+    .time__img {
+        .md(margin-bottom, 32px);
+    }
+    .time__cards {
+        margin-top: 60px;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        
+        .md-block({
+            margin-top: 32px;
+            display: block;
+        })
+    }
+    .time__card {
+        width: 248px;
+        min-height: 160px;
+        padding-bottom: 24px;
+        padding-right: 46px;
+
+        .md-block({
+            width: 100%;
+            min-height: 60px;
+        });
+    }
+    .time__h3 {
+        justify-content: flex-end;
+        .md(justify-content, flex-start);
     }
 }
