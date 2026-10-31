@@ -1,0 +1,92 @@
+<style>
+    /* Трек, определяющий длительность скролла (чем больше высота, тем медленнее скролл) */
+.scroll-track {
+  height: 250vh; 
+  view-timeline-name: --section-timeline;
+}
+
+/* Фиксированная секция на весь экран */
+.scrolling-section {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  overflow: hidden; /* Скрываем вылезающие справа карточки */
+}
+
+/* Две равные колонки */
+.column-left, .column-right {
+  flex: 0 0 50%;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.column-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+}
+
+.column-right {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* Контейнер с карточками, который будет двигаться */
+.cards-wrapper {
+  display: flex;
+  gap: 20px;
+  padding-left: 20px; /* Начальный отступ */
+  
+  /* Привязываем анимацию к вертикальному скроллу трека */
+  animation: move-cards linear both;
+  animation-timeline: --section-timeline;
+  animation-range: contain 0% contain 100%;
+}
+
+.card {
+  flex: 0 0 300px; /* Фиксированная ширина карточки */
+  height: 400px;
+  background: #f0f0f0;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Анимация смещения: от начальной позиции до упора влево */
+@keyframes move-cards {
+  to {
+    /* Сдвигаем на всю длину контейнера карточек минус ширина правой колонки */
+    transform: translateX(calc(-100% + 50vw));
+  }
+}
+</style>
+
+<div class="scroll-track">
+  <div class="scrolling-section">
+    <!-- Левая фиксированная колонка -->
+    <div class="column-left">
+      <h2>Заголовок секции</h2>
+      <p>Этот текст остается на месте, пока карточки справа прокручиваются.</p>
+    </div>
+    
+    <!-- Правая колонка с карточками -->
+    <div class="column-right">
+      <div class="cards-wrapper">
+        <div class="card">Карточка 1</div>
+        <div class="card">Карточка 2</div>
+        <div class="card">Карточка 3</div>
+        <div class="card">Карточка 4</div>
+        <div class="card">Карточка 4</div>
+        <div class="card">Карточка 4</div>
+        <div class="card">Карточка 4</div>
+        <div class="card">Карточка 4</div>
+        <div class="card">Карточка 4</div>
+        <div class="card">Карточка 4</div>
+      </div>
+    </div>
+  </div>
+</div>

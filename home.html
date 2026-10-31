@@ -18,7 +18,7 @@
 	<link rel="stylesheet" href="css/jquery.fancybox.min.css">
 	<link rel="stylesheet" href="css/flatpickr.min.css">
 
-	<link rel="stylesheet" href="css/styles.css?v=9">
+	<link rel="stylesheet" href="css/styles.css?v=11">
 </head>
 
 <body class="page-home page-header-w">
@@ -51,13 +51,13 @@
 	                    <li><a href="jet-rent.html">Аренда самолёта</a></li>
 	                    <li><a href="sell.html">Покупка и продажа</a></li>
 	                    <li><a href="about.html">О бренде</a></li>
-	                    <li><a href="#">Контакты</a></li>
+	                    <li><a href="home.html#contacts">Контакты</a></li>
 	                </ul>
 	
 	            </nav>
 	
 	            <div class="header__btns soc__btns">
-	                <a href="tel:+74958242269" class="btn-soc" target="_blank" title="Позвонить">
+	                <a href="tel:+74958242269" class="btn-soc btn-soc--tel" target="_blank" title="Позвонить">
 	                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 	                        <path d="M17.1939 12.6687C16.8046 12.4668 14.8652 11.5078 14.5045 11.378C14.1437 11.241 13.8794 11.1761 13.6187 11.5799C13.3544 11.9801 12.6043 12.8707 12.3686 13.1411C12.14 13.4079 11.9078 13.4403 11.5185 13.242C9.20408 12.0738 7.68611 11.158 6.16101 8.51518C5.75741 7.8121 6.56461 7.86258 7.31823 6.34466C7.44681 6.07785 7.38252 5.8507 7.28251 5.64879C7.18251 5.44688 6.39674 3.49269 6.06814 2.69587C5.75026 1.92068 5.42167 2.02884 5.18237 2.01442C4.95378 2 4.69305 2 4.42874 2C4.16444 2 3.73941 2.10096 3.37867 2.49396C3.01793 2.89417 2 3.85684 2 5.81104C2 7.76523 3.41081 9.65813 3.60368 9.92494C3.8037 10.1917 6.37888 14.2011 10.3327 15.9281C12.8329 17.017 13.8115 17.1107 15.0616 16.9233C15.8224 16.8079 17.3904 15.9642 17.7154 15.0304C18.0404 14.1001 18.0404 13.3033 17.944 13.1375C17.8475 12.9608 17.5832 12.8598 17.1939 12.6687Z" fill="#31363E"/>
 	                    </svg>
@@ -79,21 +79,134 @@
 
 	<main>
 
-		<section class="hero home-hero color-w">
+		<section class="hero home-hero color-w section--ribbon">
 		    <div class="container">
-		        <div class="hero__content row">
+		        <div class="hero__content">
+		            <h1 class="visually-hidden">Бизнес Авиация в любую точку мира</h1>
 		
-		            <div class="col-6 col-md-12">
-		                <h1 class="visually-hidden">visually-hidden</h1>
-		                
-		                <!-- <a href="#" class="btn btn-w"><span>Подобрать рейс</span></a> -->
-		            </div>
+		            <picture class="home-hero-text">
+		                <!-- <source srcset="img/home-hero-text-m.svg" media="(max-width: 1010px)"> -->
+		                <img src="img/home-hero-text.svg" alt="">
+		            </picture>
+		
+		            <picture class="home-hero-pic">
+		                <source srcset="img/home-hero-pic-m.png" media="(max-width: 768px)">
+		                <img src="img/home-hero-pic.png" alt="">
+		            </picture>
+		
+		            <a href="#" class="btn btn-w home-hero-btn"><span>Подобрать рейс</span></a>
 		
 		        </div>
 		    </div>
 		    <div class="ribbon" style="background-image: url('img/home-ribbon-1.svg');"></div>
 		</section>
-
+		<section class="complex">
+		    <div class="container">
+		
+		        <div class="complex__header">
+		            <h2 class="h2">Комплексные решения <br> в сфере бизнес-авиации</h2>
+		            <div class="complex__descr">От организации частных перелётов до покупки воздушного судна и управления авиационными активами.</div>
+		        </div>
+		
+		        <ul class="complex__list row">
+		            <li class="complex__item col-6 col-md-12" style="background-image: url('img/complex-1.jpg');">
+		                <a href="jet-rent.html" title="Аренда частного самолета">
+		                    <h3 class="complex__h3">Аренда частного самолета</h3>
+		                    <div class="complex__text">Срочные, международные, корпоративные и семейные перелёты</div>
+		                    <div class="complex__link"><span>Подробнее</span></div>
+		                </a>
+		            </li>
+		            <li class="complex__item complex__item--light col-6 col-md-12" style="background-image: url('img/complex-2.jpg');">
+		                <a href="helic-rent.html" title="Аренда вертолета">
+		                    <h3 class="complex__h3">Аренда вертолета</h3>
+		                    <div class="complex__text">Частный вертолётный перелёт по индивидуальному маршруту</div>
+		                    <div class="complex__link"><span>Подробнее</span></div>
+		                </a>
+		            </li>
+		            <li class="complex__item complex__item--light col-6 col-md-12" style="background-image: url('img/complex-3.jpg');">
+		                <a href="medic.html" title="Медицинские авиаперевозки">
+		                    <h3 class="complex__h3">Медицинские авиаперевозки</h3>
+		                    <div class="complex__text">Авиационная перевозка с учетом медицинских и логистических требований</div>
+		                    <div class="complex__link"><span>Подробнее</span></div>
+		                </a>
+		            </li>
+		            <li class="complex__item col-6 col-md-12" style="background-image: url('img/complex-4.jpg');">
+		                <a href="jet-rent.html" title="Групповые чартеры">
+		                    <h3 class="complex__h3">Групповые чартеры</h3>
+		                    <div class="complex__text">Персональное расписание, подходящий самолёт и единая команда</div>
+		                    <div class="complex__link"><span>Подробнее</span></div>
+		                </a>
+		            </li>
+		        </ul>
+		
+		        <div class="complex__essential">
+		            <h3 class="complex__h3">Дополнительные услуги</h3>
+		            <ul class="complex__badges">
+		                <li class="complex__badge"><a href="concierge.html"><span>Консьерж-сервис</span></a></li>
+		                <li class="complex__badge"><a href="sell.html"><span>Покупка и продажа самолетов</span></a></li>
+		                <li class="complex__badge"><a href="commerce.html"><span>Коммерческая эксплуатация</span></a></li>
+		                <li class="complex__badge"><a href="cargo.html"><span>Грузовые перевозки</span></a></li>
+		            </ul>
+		        </div>
+		
+		    </div>
+		</section>
+		<section class="time time--alt">
+		    <div class="container">
+		        <div class="time__content row">
+		
+		            <div class="col-6 col-md-12">
+		                <div class="time__wrap">
+		                    <h2 class="h2"><span>Более 20 лет</span> создаём решения <br> в сфере бизнес-авиации</h2>
+		                    <div class="time__descr">Клуб бизнес авиация — международный авиационный <br> альянс, объединяющий опыт, широкую партнёрскую сеть <br> и персональный подход к каждому перелёту.</div>
+		                    <a href="about.html" class="btn time__btn"><span>Подробнее о компании</span></a>
+		                </div>
+		            </div>
+		
+		            <div class="col-6 col-md-12 order-md-1">
+		                <div class="time__img">
+		                    <img src="img/trust.jpg" alt="">
+		                </div>
+		            </div>
+		
+		        </div>
+		
+		        <ul class="time__cards">
+		            <li class="time__card time__card--active">
+		                <div class="time__pic">
+		                    <img src="img/star.svg" alt="" width="24" height="24">
+		                </div>
+		                <h3 class="time__h3">20+ <br> лет опыта</h3>
+		            </li>
+		            <li class="time__card">
+		                <div class="time__pic">
+		                    <img src="img/location.svg" alt="" width="24" height="24">
+		                </div>
+		                <h3 class="time__h3">Международная <br> партнерская&nbsp;сеть</h3>
+		            </li>
+		            <li class="time__card">
+		                <div class="time__pic">
+		                    <img src="img/add-user.svg" alt="" width="24" height="24">
+		                </div>
+		                <h3 class="time__h3">Полное <br> сопровождение</h3>
+		            </li>
+		            <li class="time__card">
+		                <div class="time__pic">
+		                    <img src="img/message.svg" alt="" width="24" height="24">
+		                </div>
+		                <h3 class="time__h3">На связи <br> 24/7</h3>
+		            </li>
+		            <li class="time__card">
+		                <div class="time__pic">
+		                    <img src="img/shield.svg" alt="" width="24" height="24">
+		                </div>
+		                <h3 class="time__h3">100% <br>конфиденциальность</h3>
+		            </li>
+		
+		        </ul>
+		
+		    </div>
+		</section>
 		<section class="conver mb-0">
 		    <div class="container">
 		        <div class="conver__content">
@@ -118,7 +231,59 @@
 		        </div>
 		    </div>
 		</section>
-
+		<section class="story story--home mt-0 mb-0">
+		    <div class="container">
+		       
+		        <div class="story__header">
+		            <h2 class="h2 story__title">Организация перелета — просто и прозрачно</h2>
+		            <div class="story__subtitle">Мы сопровождаем каждый этап, чтобы вы могли сосредоточиться на главном.</div>
+		        </div>
+		
+		        <div class="story__cards">
+		
+		            <div class="story__card">
+		                <div class="story__inner">
+		                    <div class="story__name">Оставляете <br> заявку на сайте</div>
+		                    <div class="story__descr">маршрут, дата, число пассажиров</div>
+		                </div>
+		            </div>
+		
+		            <div class="story__card">
+		                <div class="story__inner">
+		                    <div class="story__name">Получаете несколько <br> вариантов бортов</div>
+		                    <div class="story__descr">включая закрытые предложения, которых <br> нет в открытом доступе</div>
+		                </div>
+		            </div>
+		
+		            <div class="story__card">
+		                <div class="story__inner">
+		                    <div class="story__name">Выбираете подходящий <br> вариант</div>
+		                    <div class="story__descr">и обсуждаете детали с тем же менеджером</div>
+		                </div>
+		            </div>
+		
+		            <div class="story__card">
+		                <div class="story__inner">
+		                    <div class="story__name">Подписываете <br> документы</div>
+		                </div>
+		            </div>
+		
+		            <div class="story__card story__card--pic">
+		                <div class="story__inner">
+		                    <img src="img/story-card.jpg" alt="">
+		                </div>
+		            </div>
+		
+		            <div class="story__card">
+		                <div class="story__inner">
+		                    <div class="story__name">Вылетаете без лишних хлопот</div>
+		                    <div class="story__descr">а после посадки менеджер остаётся <br> с вами на связи</div>
+		                </div>
+		            </div>
+		
+		        </div>
+		    </div>
+		</section>
 		<section class="ship bg-light2 mt-0">
 		    <div class="container">
 		        <div class="ship__content">
@@ -199,7 +364,6 @@
 		        </div>
 		    </div>
 		</section>
-
 		<section class="popular">
 		    <div class="container">
 		        <div class="popular__content row">
@@ -300,7 +464,57 @@
 		        </div>
 		    </div>
 		</section>
-
+		<section class="rental">
+		    <div class="container">
+		        <div class="rental__content row">
+		
+		            <div class="col-6 col-md-12">
+		                <div class="rental__img">
+		                    <img src="img/rental-img.jpg" alt="">
+		                </div>
+		            </div>
+		
+		            <div class="col-6 col-md-12 order-md-1">
+		                <div class="rental__info">
+		                    <h2 class="h2">Аренда вертолёта</h2>
+		                    <div class="rental__descr">Подберём вертолёт для индивидуального маршрута, трансфера из аэропорта или продолжения путешествия после частного перелёта.</div>
+		                    <a href="helic-rent.html" class="btn rental__btn"><span>Подробнее об услуге</span></a>
+		
+		
+		                        <div class="rental__slider">
+		                            <div class="rental__slide">
+		                                <img class="rental__pic" src="img/rental-1.svg" alt="" width="24" height="24">
+		                                <h3 class="rental__h3">Индивидуальный маршрут</h3>
+		                                <div class="rental__text">Маршрут формируется с учётом задачи клиента и доступных площадок для посадки.</div>
+		                            </div>
+		                            <div class="rental__slide">
+		                                <img class="rental__pic" src="img/rental-2.svg" alt="" width="24" height="24">
+		                                <h3 class="rental__h3">Экономия времени</h3>
+		                                <div class="rental__text">Вертолёт помогает сократить наземную часть поездки и быстрее добраться до конечной точки.</div>
+		                            </div>
+		                            <div class="rental__slide">
+		                                <img class="rental__pic" src="img/rental-3.svg" alt="" width="24" height="24">
+		                                <h3 class="rental__h3">Персональный подбор</h3>
+		                                <div class="rental__text">Подбираем модель вертолёта с учётом дальности, количества пассажиров, багажа и особенностей маршрута.</div>
+		                            </div>
+		                            <div class="rental__slide">
+		                                <img class="rental__pic" src="img/rental-4.svg" alt="" width="24" height="24">
+		                                <h3 class="rental__h3">Комплексная организация</h3>
+		                                <div class="rental__text">При необходимости объединяем вертолётный и самолётный перелёт в единый маршрут и координируем все этапы поездки.</div>
+		                            </div>
+		                            <div class="rental__slide">
+		                                <img class="rental__pic" src="img/rental-5.svg" alt="" width="24" height="24">
+		                                <h3 class="rental__h3">Полное сопровождение</h3>
+		                                <div class="rental__text">Берём на себя взаимодействие с операторами, согласование маршрута и организационные вопросы.</div>
+		                            </div>
+		                        </div>
+		
+		                </div>
+		            </div>
+		
+		        </div>
+		    </div>
+		</section>
 		<section class="conver conver--med mb-0">
 		    <div class="container">
 		        <div class="conver__content">
@@ -343,20 +557,20 @@
 		                    <div class="faq__body">Стоимость рассчитывается индивидуально и зависит от маршрута, даты вылета, категории и местоположения самолёта, количества пассажиров, аэропортовых сборов и дополнительных услуг. Отправьте параметры перелёта — мы проверим доступные борта и подготовим несколько подходящих вариантов с расчетом стоимости.</div>
 		                </div>
 		                <div class="faq__item">
-		                    <div class="faq__header">Насколько конфиденциально сотрудничество?</div>
-		                    <div class="faq__body">Маршрут, состав пассажиров и детали поездки известны только вашему авиационному консультанту и не передаются третьим лицам без вашего согласия. </div>
-		                </div>
-		                <div class="faq__item">
 		                    <div class="faq__header">Как быстро можно организовать частный перелёт?</div>
 		                    <div class="faq__body">Это зависит от маршрута, доступности самолётов, аэропортовых ограничений и необходимости получения разрешений. В ряде случаев рейс можно организовать в день обращения. Для срочных запросов мы в первую очередь проверяем ближайшие доступные борта и предлагаем оптимальные варианты по времени и маршруту.</div>
 		                </div>
 		                <div class="faq__item">
-		                    <div class="faq__header">Что нужно сообщить для подбора самолёта?</div>
-		                    <div class="faq__body">Для первого расчета достаточно указать город или аэропорт вылета и прилета, дату поездки и количество пассажиров. Если есть дополнительные пожелания — определенная модель самолёта, большой объем багажа, перелёт с животными, особое питание или трансфер — их можно сообщить сразу или обсудить с авиационным консультантом.</div>
+		                    <div class="faq__header">Что такое Empty Legs и почему такой перелёт может стоить дешевле?</div>
+		                    <div class="faq__body">Empty Legs — это свободный участок маршрута, который самолёт выполняет без пассажиров, например возвращаясь после уже запланированного рейса. Такой борт иногда можно арендовать на специальных условиях. При этом дата, время и маршрут обычно менее гибкие, а доступность предложения необходимо подтверждать непосредственно перед бронированием.</div>
 		                </div>
 		                <div class="faq__item">
 		                    <div class="faq__header">Как понять, какой самолёт подойдет для моего маршрута?</div>
 		                    <div class="faq__body">Самостоятельно выбирать модель не обязательно. При подборе мы учитываем дальность маршрута, количество пассажиров, объем багажа, требования к салону, аэропорты вылета и прилета и другие параметры. В результате вы получаете несколько подходящих вариантов и можете сравнить их по стоимости и характеристикам.</div>
+		                </div>
+		                <div class="faq__item">
+		                    <div class="faq__header">Что нужно сообщить для подбора самолёта?</div>
+		                    <div class="faq__body">Для первого расчета достаточно указать город или аэропорт вылета и прилета, дату поездки и количество пассажиров. Если есть дополнительные пожелания — определенная модель самолёта, большой объем багажа, перелёт с животными, особое питание или трансфер — их можно сообщить сразу или обсудить с авиационным консультантом.</div>
 		                </div>
 		            </div>
 		
@@ -370,6 +584,10 @@
 		                    </div>
 		                </div>
 		                <div class="faq__item">
+		                    <div class="faq__header">Насколько конфиденциально сотрудничество?</div>
+		                <div class="faq__body">Маршрут, состав пассажиров и детали поездки известны только вашему авиационному консультанту и не передаются третьим лицам без вашего согласия. </div>
+		                </div>
+		                <div class="faq__item">
 		                    <div class="faq__header">Какие документы нужны для перелёта на частном самолёте?</div>
 		                    <div class="faq__body">Требования зависят от маршрута, гражданства пассажиров и страны назначения. Для международных перелётов действуют паспортные, визовые и таможенные требования соответствующих стран. После согласования маршрута авиационный консультант сообщит, какие документы понадобятся именно для вашего рейса.</div>
 		                </div>
@@ -377,10 +595,7 @@
 		                    <div class="faq__header">Можно ли лететь с детьми, домашними животными или большим багажом?</div>
 		                    <div class="faq__body">Да. Эти параметры необходимо сообщить при подборе самолёта, поскольку вместимость багажного отсека и правила перевозки животных различаются в зависимости от воздушного судна, оператора и страны назначения. Мы учтем их при формировании вариантов и заранее согласуем необходимые условия.</div>
 		                </div>
-		                <div class="faq__item">
-		                    <div class="faq__header">Что такое Empty Legs и почему такой перелёт может стоить дешевле?</div>
-		                    <div class="faq__body">Empty Legs — это свободный участок маршрута, который самолёт выполняет без пассажиров, например возвращаясь после уже запланированного рейса. Такой борт иногда можно арендовать на специальных условиях. При этом дата, время и маршрут обычно менее гибкие, а доступность предложения необходимо подтверждать непосредственно перед бронированием.</div>
-		                </div>
+		
 		            </div>
 		        </div>
 		
@@ -425,7 +640,29 @@
 		        </div>
 		    </div>
 		</section>
-
+		<section class="contacts bg-blue-d mb-0" id="contacts">
+		    <div class="container">
+		        <div class="contacts__content">
+		            <div class="contacts__descr">Клуб Бизнес Авиация — международный авиационный брокер, который помогает быстро и конфиденциально организовать частные и корпоративные перелёты по всему миру.</div>
+		
+		            <div class="soc__btns contacts__btns">
+		                <a href="tel:+74958242269" class="btn-soc btn-soc--tel" target="_blank" title="Позвонить">
+		                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+		                        <path d="M17.1939 12.6687C16.8046 12.4668 14.8652 11.5078 14.5045 11.378C14.1437 11.241 13.8794 11.1761 13.6187 11.5799C13.3544 11.9801 12.6043 12.8707 12.3686 13.1411C12.14 13.4079 11.9078 13.4403 11.5185 13.242C9.20408 12.0738 7.68611 11.158 6.16101 8.51518C5.75741 7.8121 6.56461 7.86258 7.31823 6.34466C7.44681 6.07785 7.38252 5.8507 7.28251 5.64879C7.18251 5.44688 6.39674 3.49269 6.06814 2.69587C5.75026 1.92068 5.42167 2.02884 5.18237 2.01442C4.95378 2 4.69305 2 4.42874 2C4.16444 2 3.73941 2.10096 3.37867 2.49396C3.01793 2.89417 2 3.85684 2 5.81104C2 7.76523 3.41081 9.65813 3.60368 9.92494C3.8037 10.1917 6.37888 14.2011 10.3327 15.9281C12.8329 17.017 13.8115 17.1107 15.0616 16.9233C15.8224 16.8079 17.3904 15.9642 17.7154 15.0304C18.0404 14.1001 18.0404 13.3033 17.944 13.1375C17.8475 12.9608 17.5832 12.8598 17.1939 12.6687Z" fill="#FFFAF5"/>
+		                    </svg>
+		                    +7 (495) 824-22-69
+		                </a>
+		                <a href="#" class="btn-soc" target="_blank" title="Написать в Телеграм">
+		                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+		                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1.3749 8.8879C6.74359 6.62993 10.3236 5.14134 12.1148 4.42212C17.2292 2.36862 18.2919 2.0119 18.9846 2.00013C19.1369 1.99753 19.4776 2.03398 19.6982 2.20682C19.8845 2.35275 19.9358 2.5499 19.9603 2.68826C19.9848 2.82663 20.0154 3.14183 19.9911 3.38811C19.714 6.1992 18.5147 13.021 17.9046 16.1694C17.6465 17.5017 17.1382 17.9484 16.6461 17.9921C15.5766 18.0871 14.7645 17.3098 13.7287 16.6543C12.1078 15.6287 11.1921 14.9902 9.61879 13.9893C7.80053 12.8327 8.97923 12.1969 10.0154 11.158C10.2866 10.8861 14.9987 6.74867 15.0899 6.37335C15.1013 6.32641 15.1119 6.15143 15.0042 6.05904C14.8965 5.96664 14.7376 5.99824 14.6229 6.02337C14.4604 6.05898 11.871 7.71112 6.85486 10.9798C6.11988 11.467 5.45416 11.7044 4.8577 11.6919C4.20015 11.6782 2.93528 11.333 1.99498 11.038C0.84166 10.6761 -0.074973 10.4847 0.00484519 9.87009C0.0464194 9.54996 0.503103 9.22256 1.3749 8.8879Z" fill="#FFFAF5"/>
+		                    </svg>
+		                </a>
+		                <a href="#" class="btn btn-w contacts__btn"><span>Заказать обратный звонок</span></a>
+		            </div>
+		
+		        </div>
+		    </div>
+		</section>
 		
 	</main>
 
@@ -467,8 +704,8 @@
 	                        <div class="footer__title">О бренде</div>
 	                        <ul class="footer__menu">
 	                            <li><a href="about.html">О компании</a></li>
-	                            <li><a href="#">Почему мы</a></li>
-	                            <li><a href="#">Контакты</a></li>
+	                            <li><a href="about.html#trust">Почему мы</a></li>
+	                            <li><a href="home.html#contacts">Контакты</a></li>
 	                        </ul>
 	                    </div>
 	
@@ -495,6 +732,8 @@
 	
 	                </div>
 	            </div>
+	
+	            <a href="#" id="scroll-button" class="btn btn-up">up</a>
 	
 	       </div>
 	
@@ -530,7 +769,7 @@
 	<script src="js/jquery.fancybox.min.js"></script>
 	<script src="js/flatpickr.min.js"></script>
 	<script src="js/slick.min.js"></script>
-	<script src="js/scripts.js?v=9"></script>
+	<script src="js/scripts.js?v=11"></script>
 	<!-- end scripts -->
 
 </body>

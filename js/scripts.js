@@ -34,16 +34,16 @@ $(function() {
       }
   });
   
-  // if ($(window).width() <= 768) {
+  if ($(window).width() <= 768) {
   
-  //     $('body').on('click', '.header__menu a[href*="#"]', function(e) {
-  //         burger.toggleClass('burger-close');
-  //         menu.toggleClass('open');
-  //         $('html, body').removeClass('overflow');
-  //         syncScrolledHeader();
-  //     });
+      $('body').on('click', '.navigation__menu a', function(e) {
+          burger.toggleClass('close');
+          menu.toggleClass('open');
+          $('html, body').removeClass('overflow');
+          // syncScrolledHeader();
+      });
   
-  // }
+  }
   if (isTouchDevice) {
   
       $('.navigation__menu .menu-item-has-children > a').on('click', function(e) {
@@ -201,6 +201,40 @@ $(function() {
       prevArrow: $('.steps .arrow-prev'),
   });
   
+  // rental slider
+  
+  const rentalSlider = $('.rental__slider');
+  
+  function initRentalSlider() {
+      if ($(window).width() <= 768) {
+          if (!rentalSlider.hasClass('slick-initialized')) {
+              rentalSlider.slick({
+                  slidesToShow: 2,
+                  slidesToScroll: 1,
+                  // adaptiveHeight: true,
+                  // variableWidth: true,
+                  // centerMode: true,
+                  arrows: false,
+                  responsive: [
+                      {
+                          breakpoint: 576,
+                          settings: {
+                              slidesToShow: 1,
+                              centerMode: true,
+                          }
+                      },
+                  ]
+              });
+          }
+      } else {
+          if (rentalSlider.hasClass('slick-initialized')) {
+              rentalSlider.slick('unslick');
+          }
+      }
+  }
+  
+  initRentalSlider();
+  
   // ship slider
   
   $('.ship__slider').slick({
@@ -313,6 +347,29 @@ $(function() {
           preload : false
       },
       closeExisting : true
+  });
+  var arrowUpBtn = $('#scroll-button');
+  
+  function scrollBtn() {
+  	var top = $(this).scrollTop();
+  
+  	if (top > 300) {
+  		arrowUpBtn.fadeIn(500);
+  	} else {
+  		arrowUpBtn.fadeOut(500);
+  	}
+  }
+  
+  scrollBtn();
+  
+  $(window).on('scroll', scrollBtn);
+  
+  arrowUpBtn.click(function(e) {
+      e.preventDefault();
+  
+      $('body, html').animate({
+          scrollTop: 0
+      }, 300)
   });
 
 });
