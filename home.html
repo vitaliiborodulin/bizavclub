@@ -17,8 +17,7 @@
 	<link rel="stylesheet" href="css/slick.css">
 	<link rel="stylesheet" href="css/jquery.fancybox.min.css">
 	<link rel="stylesheet" href="css/flatpickr.min.css">
-
-	<link rel="stylesheet" href="css/styles.css?v=11">
+	<link rel="stylesheet" href="css/styles.css?v=12">
 </head>
 
 <body class="page-home page-header-w">
@@ -94,7 +93,7 @@
 		                <img src="img/home-hero-pic.png" alt="">
 		            </picture>
 		
-		            <a href="#" class="btn btn-w home-hero-btn"><span>Подобрать рейс</span></a>
+		            <a href="javascript:;" class="btn btn-w home-hero-btn popup-link" data-src="#flight"><span>Подобрать рейс</span></a>
 		
 		        </div>
 		    </div>
@@ -225,7 +224,7 @@
 		            </div>
 		
 		            <div class="conver__btns">
-		                <a href="#" class="btn btn-w"><span>Оставить заявку</span></a>
+		                <a href="#" class="btn btn-w popup-link" data-src="#flight"><span>Оставить заявку</span></a>
 		                <a href="jet-rent.html" class="btn btn-o">Подробнее об услуге</a>
 		            </div>
 		        </div>
@@ -386,7 +385,7 @@
 		                        <div><div class="popular__city">Шри-Ланка</div></div>
 		                    </div>
 		
-		                    <a href="#" class="btn popular__btn"><span>Обсудить маршрут</span></a>
+		                    <a href="javascript:;" class="btn popular__btn popup-link" data-src="#flight"><span>Обсудить маршрут</span></a>
 		                </div>
 		            </div>
 		            <div class="col-7 col-md-12">
@@ -454,7 +453,7 @@
 		                <h2 class="h2 tell__title">Перелёты для бизнеса и мероприятий</h2>
 		                <div class="tell__descr">Организуем групповые перелёты <br> для корпоративных команд, делегаций, спортивных <br> клубов и крупных мероприятий.</div>
 		                <div class="tell__btns">
-		                    <a href="#" class="btn"><span>Оставить заявку</span></a>
+		                    <a href="javascript:;" class="btn popup-link" data-src="#flight"><span>Оставить заявку</span></a>
 		                    <a href="group.html" class="btn btn-o-b ">Подробнее об услуге</a>
 		                </div>
 		            </div>
@@ -657,7 +656,7 @@
 		                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1.3749 8.8879C6.74359 6.62993 10.3236 5.14134 12.1148 4.42212C17.2292 2.36862 18.2919 2.0119 18.9846 2.00013C19.1369 1.99753 19.4776 2.03398 19.6982 2.20682C19.8845 2.35275 19.9358 2.5499 19.9603 2.68826C19.9848 2.82663 20.0154 3.14183 19.9911 3.38811C19.714 6.1992 18.5147 13.021 17.9046 16.1694C17.6465 17.5017 17.1382 17.9484 16.6461 17.9921C15.5766 18.0871 14.7645 17.3098 13.7287 16.6543C12.1078 15.6287 11.1921 14.9902 9.61879 13.9893C7.80053 12.8327 8.97923 12.1969 10.0154 11.158C10.2866 10.8861 14.9987 6.74867 15.0899 6.37335C15.1013 6.32641 15.1119 6.15143 15.0042 6.05904C14.8965 5.96664 14.7376 5.99824 14.6229 6.02337C14.4604 6.05898 11.871 7.71112 6.85486 10.9798C6.11988 11.467 5.45416 11.7044 4.8577 11.6919C4.20015 11.6782 2.93528 11.333 1.99498 11.038C0.84166 10.6761 -0.074973 10.4847 0.00484519 9.87009C0.0464194 9.54996 0.503103 9.22256 1.3749 8.8879Z" fill="#FFFAF5"/>
 		                    </svg>
 		                </a>
-		                <a href="#" class="btn btn-w contacts__btn"><span>Заказать обратный звонок</span></a>
+		                <a href="javascript:;" class="btn btn-w contacts__btn popup-link" data-src="#call"><span>Заказать обратный звонок</span></a>
 		            </div>
 		
 		        </div>
@@ -739,37 +738,139 @@
 	
 	    </div>
 	</footer>
-	<div style="display: none;" class="popup" id="discover">
-	    <div class="popup__title">Discover our services</div>
-	    <form class="form popup__form">
-	        <div class="form__row">
-	            <input class="form__input" type="tel" name="phone" placeholder="Phone">
-	            <input class="form__input" type="text" name="last" placeholder="Last name">
-	            <input class="form__input" type="email" name="email" placeholder="Email*" required>
-	            <input class="form__input" type="text" name="phone" placeholder="First name*" required>
-	        </div>
-	        <div class="form__row">
-	            <div class="form__item">
-	                <label for="message1">Any additional requests that we may assist you with?</label>
-	                <textarea class="form__input" name="message" id="message1" placeholder="Enter text"></textarea>
+	<div style="display: none;" class="popup" id="flight">
+	    <div class="popup__title">Подбор рейса</div>
+	    <form class="popup__form">
+	        <div class="form__grid">
+	            <div class="form__input form__input--name">
+	                <input type="text" class="w-100" name="name" placeholder="Имя*" required>
+	            </div>
+	            <div class="form__input form__input--tel">
+	                <input type="tel" class="w-100" name="tel" placeholder="Телефон*" required>
+	            </div>
+	            <div class="form__input form__input--mail">
+	                <input type="email" class="w-100" name="mail" placeholder="Email">
+	            </div>
+	
+	            <div class="form__input form__input--icon form__input--from">
+	                <input type="text" class="w-100" name="from" placeholder="Откуда">
+	            </div>
+	            <div class="form__input form__input--icon form__input--place">
+	                <input type="text" class="w-100" name="place" placeholder="Куда">
+	            </div>
+	            <div class="form__input form__input--icon form__input--cal">
+	                <input type="text" class="cal w-100" name="cal" class="cal" placeholder="Дата">
+	            </div>
+	            <div class="form__input form__input--people">
+	                <button type="button" class="minus">-</button>
+	                <input type="number" name="people" value="1" min="1">
+	                <span>Пассажир</span>
+	                <button type="button" class="plus">+</button>
+	            </div>
+	            <div class="form__input form__input--textarea">
+	                <textarea name="text" class="w-100" placeholder="Комментарий"></textarea>
 	            </div>
 	        </div>
-	        <div class="form__row">
-	            <div class="form__item d-flex">
-	                <input type="checkbox" name="privacy" class="form__checkbox" id="privacy1">
-	                <label for="privacy1" class="form__checkbox-text">Your personal data will be processed in accordance with our <a href="#">Privacy Notice</a></label>
-	            </div>
+	        <div class="form__checkbox form__checkbox--b">
+	            <input type="checkbox" name="agree" id="agree">
+	            <label for="agree" class="form__checkbox-text">Согласен с условиями оферты и политики конфиденциальности</label>
 	        </div>
-	        <!-- <button class="btn" type="submit">Submit</button> -->
-	         <button class="btn popup-link" type="button" data-src="#success">Submit</button>
+	        <button type="submit" class="btn w-100 popup__btn"><span>Отправить заявку</span></button>
 	    </form>
 	</div>
+	
+	<div style="display: none;" class="popup" id="call">
+	    <div class="popup__title">Заказать обратный звонок</div>
+	    <form class="popup__form">
+	        <div class="form__input form__input--name">
+	            <input type="text" class="w-100" name="name" placeholder="Имя*" required>
+	        </div>
+	        <div class="form__input form__input--tel">
+	            <input type="tel" class="w-100" name="tel" placeholder="Телефон*" required>
+	        </div>
+	        <div class="form__checkbox form__checkbox--b">
+	            <input type="checkbox" name="agree" id="agree1">
+	            <label for="agree1" class="form__checkbox-text">Согласен с условиями оферты и политики конфиденциальности</label>
+	        </div>
+	        <button type="submit" class="btn w-100 popup__btn"><span>Отправить заявку</span></button>
+	    </form>
+	</div>
+	
+	<div style="display: none;" class="popup" id="pers">
+	    <div class="popup__title">Запрос персонального предложения</div>
+	    <form class="popup__form">
+	        <div class="form__input form__input--name">
+	            <input type="text" class="w-100" name="name" placeholder="Имя*" required>
+	        </div>
+	        <div class="form__input form__input--tel">
+	            <input type="tel" class="w-100" name="tel" placeholder="Телефон*" required>
+	        </div>
+	        <div class="form__input form__input--mail">
+	            <input type="email" class="w-100" name="mail" placeholder="Email*" required>
+	        </div>
+	        <div class="form__radio">
+	            <div class="form__radio-title">Куда направить предложение?</div>
+	            <div class="form__radio-btn">
+	                <input id="radio-1" type="radio" name="radio" value="max">
+	                <label for="radio-1" class="form__radio-text">Max</label>
+	            </div>
+	            <div class="form__radio-btn">
+	                <input id="radio-2" type="radio" name="radio" value="tg">
+	                <label for="radio-2" class="form__radio-text">Telegram</label>
+	            </div>
+	            <div class="form__radio-btn">
+	                <input id="radio-3" type="radio" name="radio" value="email">
+	                <label for="radio-3" class="form__radio-text">Email</label>
+	            </div>
+	        </div>
+	        <div class="form__checkbox form__checkbox--b">
+	            <input type="checkbox" name="agree" id="agree2">
+	            <label for="agree2" class="form__checkbox-text">Согласен с условиями оферты и политики конфиденциальности</label>
+	        </div>
+	        <button type="submit" class="btn w-100 popup__btn"><span>Отправить заявку</span></button>
+	    </form>
+	</div>
+	
+	<div style="display: none;" class="popup" id="request">
+	    <div class="popup__title">Оставьте заявку</div>
+	    <form class="popup__form">
+	        <div class="form__input form__input--name">
+	            <input type="text" class="w-100" name="name" placeholder="Имя*" required>
+	        </div>
+	        <div class="form__input form__input--tel">
+	            <input type="tel" class="w-100" name="tel" placeholder="Телефон*" required>
+	        </div>
+	        <div class="form__input form__input--mail">
+	            <input type="email" class="w-100" name="mail" placeholder="Email">
+	        </div>
+	        <div class="form__checkbox form__checkbox--b">
+	            <input type="checkbox" name="agree" id="agree3">
+	            <label for="agree3" class="form__checkbox-text">Согласен с условиями оферты и политики конфиденциальности</label>
+	        </div>
+	        <button type="submit" class="btn w-100 popup__btn"><span>Отправить заявку</span></button>
+	    </form>
+	</div>
+	
+	<div style="display: none;" class="popup popup--alarm tac" id="success">
+	    <img class="popup__img" src="img/popup-ok.svg" alt="" width="45" height="45">
+	    <div class="popup__title">Запрос отправлен</div>
+	    <div class="popup__descr">Благодарим вас за запрос. Ваш персональный консультант по перелётам свяжется с вами в ближайшее время.</div>
+	    <a href="home.html" class="btn btn-w w-100"><span>На главную</span></a>
+	</div>
+	
+	<div style="display: none;" class="popup popup--alarm tac" id="fail">
+	    <img class="popup__img" src="img/popup-no.svg" alt="" width="45" height="45">
+	    <div class="popup__title">Произошла ошибка</div>
+	    <div class="popup__descr">Ваш запрос не отправлен, попробуйте еще раз.</div>
+	    <a href="home.html" class="btn btn-w w-100"><span>На главную</span></a>
+	    
+	</div>
 	<!-- scripts -->
-	<script src="js/jquery-3.7.1.min.js"></script>
-	<script src="js/jquery.fancybox.min.js"></script>
-	<script src="js/flatpickr.min.js"></script>
-	<script src="js/slick.min.js"></script>
-	<script src="js/scripts.js?v=11"></script>
+	<script src="js/jquery-3.7.1.min.js" defer></script>
+	<script src="js/jquery.fancybox.min.js" defer></script>
+	<script src="js/flatpickr.min.js" defer></script>
+	<script src="js/slick.min.js" defer></script>
+	<script src="js/scripts.js?v=12" defer></script>
 	<!-- end scripts -->
 
 </body>
