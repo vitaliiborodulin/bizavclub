@@ -1,25 +1,129 @@
-<div style="display: none;" class="popup" id="discover">
-    <div class="popup__title">Discover our services</div>
-    <form class="form popup__form">
-        <div class="form__row">
-            <input class="form__input" type="tel" name="phone" placeholder="Phone">
-            <input class="form__input" type="text" name="last" placeholder="Last name">
-            <input class="form__input" type="email" name="email" placeholder="Email*" required>
-            <input class="form__input" type="text" name="phone" placeholder="First name*" required>
-        </div>
-        <div class="form__row">
-            <div class="form__item">
-                <label for="message1">Any additional requests that we may assist you with?</label>
-                <textarea class="form__input" name="message" id="message1" placeholder="Enter text"></textarea>
+<div style="display: none;" class="popup" id="flight">
+    <div class="popup__title">Подбор рейса</div>
+    <form class="popup__form">
+        <div class="form__grid">
+            <div class="form__input form__input--name">
+                <input type="text" class="w-100" name="name" placeholder="Имя*" required>
+            </div>
+            <div class="form__input form__input--tel">
+                <input type="tel" class="w-100" name="tel" placeholder="Телефон*" required>
+            </div>
+            <div class="form__input form__input--mail">
+                <input type="email" class="w-100" name="mail" placeholder="Email">
+            </div>
+
+            <div class="form__input form__input--icon form__input--from">
+                <input type="text" class="w-100" name="from" placeholder="Откуда">
+            </div>
+            <div class="form__input form__input--icon form__input--place">
+                <input type="text" class="w-100" name="place" placeholder="Куда">
+            </div>
+            <div class="form__input form__input--icon form__input--cal">
+                <input type="text" class="cal w-100" name="cal" class="cal" placeholder="Дата">
+            </div>
+            <div class="form__input form__input--people">
+                <button type="button" class="minus">-</button>
+                <input type="number" name="people" value="1" min="1">
+                <span>Пассажир</span>
+                <button type="button" class="plus">+</button>
+            </div>
+            <div class="form__input form__input--textarea">
+                <textarea name="text" class="w-100" placeholder="Комментарий"></textarea>
             </div>
         </div>
-        <div class="form__row">
-            <div class="form__item d-flex">
-                <input type="checkbox" name="privacy" class="form__checkbox" id="privacy1">
-                <label for="privacy1" class="form__checkbox-text">Your personal data will be processed in accordance with our <a href="#">Privacy Notice</a></label>
-            </div>
+        <div class="form__checkbox form__checkbox--b">
+            <input type="checkbox" name="agree" id="agree">
+            <label for="agree" class="form__checkbox-text">Согласен с условиями оферты и политики конфиденциальности</label>
         </div>
-        <!-- <button class="btn" type="submit">Submit</button> -->
-         <button class="btn popup-link" type="button" data-src="#success">Submit</button>
+        <button type="submit" class="btn w-100 popup__btn"><span>Отправить заявку</span></button>
     </form>
 </div>
+
+<div style="display: none;" class="popup" id="call">
+    <div class="popup__title">Заказать обратный звонок</div>
+    <form class="popup__form">
+        <div class="form__input form__input--name">
+            <input type="text" class="w-100" name="name" placeholder="Имя*" required>
+        </div>
+        <div class="form__input form__input--tel">
+            <input type="tel" class="w-100" name="tel" placeholder="Телефон*" required>
+        </div>
+        <div class="form__checkbox form__checkbox--b">
+            <input type="checkbox" name="agree" id="agree1">
+            <label for="agree1" class="form__checkbox-text">Согласен с условиями оферты и политики конфиденциальности</label>
+        </div>
+        <button type="submit" class="btn w-100 popup__btn"><span>Отправить заявку</span></button>
+    </form>
+</div>
+
+<div style="display: none;" class="popup" id="pers">
+    <div class="popup__title">Запрос персонального предложения</div>
+    <form class="popup__form">
+        <div class="form__input form__input--name">
+            <input type="text" class="w-100" name="name" placeholder="Имя*" required>
+        </div>
+        <div class="form__input form__input--tel">
+            <input type="tel" class="w-100" name="tel" placeholder="Телефон*" required>
+        </div>
+        <div class="form__input form__input--mail">
+            <input type="email" class="w-100" name="mail" placeholder="Email*" required>
+        </div>
+        <div class="form__radio">
+            <div class="form__radio-title">Куда направить предложение?</div>
+            <div class="form__radio-btn">
+                <input id="radio-1" type="radio" name="radio" value="max">
+                <label for="radio-1" class="form__radio-text">Max</label>
+            </div>
+            <div class="form__radio-btn">
+                <input id="radio-2" type="radio" name="radio" value="tg">
+                <label for="radio-2" class="form__radio-text">Telegram</label>
+            </div>
+            <div class="form__radio-btn">
+                <input id="radio-3" type="radio" name="radio" value="email">
+                <label for="radio-3" class="form__radio-text">Email</label>
+            </div>
+        </div>
+        <div class="form__checkbox form__checkbox--b">
+            <input type="checkbox" name="agree" id="agree2">
+            <label for="agree2" class="form__checkbox-text">Согласен с условиями оферты и политики конфиденциальности</label>
+        </div>
+        <button type="submit" class="btn w-100 popup__btn"><span>Отправить заявку</span></button>
+    </form>
+</div>
+
+<div style="display: none;" class="popup" id="request">
+    <div class="popup__title">Оставьте заявку</div>
+    <form class="popup__form">
+        <div class="form__input form__input--name">
+            <input type="text" class="w-100" name="name" placeholder="Имя*" required>
+        </div>
+        <div class="form__input form__input--tel">
+            <input type="tel" class="w-100" name="tel" placeholder="Телефон*" required>
+        </div>
+        <div class="form__input form__input--mail">
+            <input type="email" class="w-100" name="mail" placeholder="Email">
+        </div>
+        <div class="form__checkbox form__checkbox--b">
+            <input type="checkbox" name="agree" id="agree3">
+            <label for="agree3" class="form__checkbox-text">Согласен с условиями оферты и политики конфиденциальности</label>
+        </div>
+        <button type="submit" class="btn w-100 popup__btn"><span>Отправить заявку</span></button>
+    </form>
+</div>
+
+<div style="display: none;" class="popup popup--alarm tac" id="success">
+    <img class="popup__img" src="img/popup-ok.svg" alt="" width="45" height="45">
+    <div class="popup__title">Запрос отправлен</div>
+    <div class="popup__descr">Благодарим вас за запрос. Ваш персональный консультант по перелётам свяжется с вами в ближайшее время.</div>
+    <a href="home.html" class="btn btn-w w-100"><span>На главную</span></a>
+</div>
+
+<div style="display: none;" class="popup popup--alarm tac" id="fail">
+    <img class="popup__img" src="img/popup-no.svg" alt="" width="45" height="45">
+    <div class="popup__title">Произошла ошибка</div>
+    <div class="popup__descr">Ваш запрос не отправлен, попробуйте еще раз.</div>
+    <a href="home.html" class="btn btn-w w-100"><span>На главную</span></a>
+    
+</div>
+
+

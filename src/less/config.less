@@ -6,6 +6,7 @@
 @light2: #F7F1EA;
 @text: #31363E;
 @text1: #4F555F;
+@black: #181818;
 
 
 @fontsize: 15px; // Body Font Size
@@ -117,7 +118,8 @@ body {
 }
 
 [id] {
-  scroll-margin-top: 70px;
+  scroll-margin-top: 85px;
+  .md(scroll-margin-top, 70px);
 }
 
 .visually-hidden {
@@ -280,7 +282,7 @@ section.hero {
 }
 
 .section-list {
-    height: 100vh;
+    margin-top: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
