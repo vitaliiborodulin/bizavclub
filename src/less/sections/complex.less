@@ -36,10 +36,6 @@
         min-height: 350px;
         margin-bottom: 20px;
         border-radius: 10px;
-        background-color: @blue_l;
-        background-repeat: no-repeat;
-        background-position: center bottom;
-        background-size: cover;
 
         .md-block({
             min-height: 280px;
@@ -54,6 +50,36 @@
             height: 100%;
         }
     }
+
+    &__item:nth-child(1){
+        background: @blue_l url('../img/complex-1.jpg') no-repeat center/cover;
+
+        .xs-block({
+            background: @blue_l url('../img/complex-1-m.jpg') no-repeat center/cover;
+        })
+    }
+    &__item:nth-child(2){
+        background: @blue_l url('../img/complex-2-new.jpg') no-repeat center/cover;
+
+        .xs-block({
+            background: @blue_l url('../img/complex-2-m.jpg') no-repeat center/cover;
+        })
+    }
+    &__item:nth-child(3){
+        background: @blue_l url('../img/complex-3-new.jpg') no-repeat center/cover;
+
+        .xs-block({
+            background: @blue_l url('../img/complex-3-m.jpg') no-repeat center/cover;
+        })
+    }
+    &__item:nth-child(4){
+        background: @blue_l url('../img/complex-4.jpg') no-repeat center/cover;
+
+        .xs-block({
+            background: @blue_l url('../img/complex-4-m.jpg') no-repeat center/cover;
+        })
+    }
+    
 
     &__item.complex__item--light {
         color: @light;
